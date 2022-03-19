@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: grey;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+}
+
+.container {
+  padding: 20px 10px;
+}
+
+#main {
+  display: grid;
+}
+
+#sidebar {
+  background-color: burlywood;
+  width: 20%;
+}
+
+#sidebar ul li {
+  list-style: none;
+  padding-left: 15px;
+}
+
+#sidebar .project {
+  margin-bottom: 15px;
+}
