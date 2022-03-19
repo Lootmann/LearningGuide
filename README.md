@@ -23,10 +23,15 @@ Learning Guide.
   - [x] AWS Solution Architecture - Associate
     - [Passed on March 17th](https://www.credly.com/badges/2cba3651-bdd2-4ee8-8489-6c65201055e5/public_url)
 
+## Books
+
 ## Computer Science
 
 ## DSA
 
-Data Structures and Algorithms
+- Data Structures and Algorithms
 
-## Books
+## Tools
+
+- google-test
+- mermaid
