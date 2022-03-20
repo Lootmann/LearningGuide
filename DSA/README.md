@@ -2,7 +2,7 @@
 
 Learn Data Structures and Algorithms.
 
-## Todo
+## Lists
 
 - [x] Array
 
@@ -21,3 +21,17 @@ Learn Data Structures and Algorithms.
   - [ ] DLL Stack
   - [ ] DLL Queue
   - [ ] DLL Deque
+
+- [ ] Hash
+
+  - [ ] Open Address
+  - [ ] Chain Hash
+
+- [ ] Heap
+
+  - [ ] Binary Heap
+
+- [ ] String
+
+- [ ] Tree
+- [ ] Graph
