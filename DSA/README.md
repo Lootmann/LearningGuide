@@ -16,10 +16,10 @@ Learn Data Structures and Algorithms.
   - [x] SLL Stack
   - [x] SLL Queue
 
-- [ ] Doubly Linked List
+- [x] Doubly Linked List
 
   - [x] DLL Stack
-  - [ ] DLL Queue
+  - [x] DLL Queue
   - [x] DLL Deque
 
 - [ ] Hash
