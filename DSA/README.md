@@ -18,9 +18,9 @@ Learn Data Structures and Algorithms.
 
 - [ ] Doubly Linked List
 
-  - [ ] DLL Stack
+  - [x] DLL Stack
   - [ ] DLL Queue
-  - [ ] DLL Deque
+  - [x] DLL Deque
 
 - [ ] Hash
 
