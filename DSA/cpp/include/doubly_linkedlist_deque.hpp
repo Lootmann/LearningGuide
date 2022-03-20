@@ -17,7 +17,10 @@ public:
     dummy->next = dummy;
     dummy->prev = dummy;
   }
-  ~DoublyLinkedListDeque() {}
+
+  ~DoublyLinkedListDeque() {
+    // TODO: delete all dll nodes
+  }
 
   using Type = DoublyLinkedListNode<T>;
 
@@ -61,6 +64,7 @@ public:
 
   // queue
   void enqueue(T data) {
+    count++;
     auto *newnode = new Type(data);
 
     if (this->empty()) {
@@ -71,13 +75,29 @@ public:
       newnode->prev = dummy;
       return;
     }
+
+    dummy->prev->next = newnode;
+    newnode->prev = dummy->prev;
+    newnode->next = dummy;
+    dummy->prev = newnode;
   }
 
   T dequeue() {
-    assert(this->empty());
+    assert(!this->empty());
+    count--;
+    auto delnode = dummy->next;
+
+    dummy->next = dummy->next->next;
+    dummy->next->next->prev = dummy;
+
+    T popped = delnode->data;
+    delete delnode;
+    return popped;
   }
 
-  T front() {}
+  T front() {
+    return dummy->next->data;
+  }
 
   bool empty() {
     return dummy->next == dummy && dummy->prev == dummy;

@@ -13,12 +13,12 @@ protected:
   std::vector<int> vi{};
 };
 
-TEST_F(DoublyLinkedListDequeTest, init) {
+TEST_F(DoublyLinkedListDequeTest, Init) {
   EXPECT_EQ(sll.size(), 0);
   EXPECT_TRUE(sll.empty());
 }
 
-TEST_F(DoublyLinkedListDequeTest, stack) {
+TEST_F(DoublyLinkedListDequeTest, Stack) {
   REP(i, 100) vi.emplace_back(i);
 
   // push
@@ -33,5 +33,22 @@ TEST_F(DoublyLinkedListDequeTest, stack) {
   for (int i = (int)vi.size() - 1; i >= 0; --i) {
     EXPECT_EQ(sll.pop(), vi[i]);
     EXPECT_EQ(sll.size(), i);
+  }
+}
+
+TEST_F(DoublyLinkedListDequeTest, Queue) {
+  REP(i, 100) vi.emplace_back(i);
+
+  // enqueue
+  for (auto i : vi) {
+    sll.enqueue(i);
+    EXPECT_EQ(sll.front(), 0);
+  }
+
+  // dequeue
+  EXPECT_EQ(sll.size(), vi.size());
+  for (int i = 0; i < 100; ++i) {
+    EXPECT_EQ(sll.dequeue(), i);
+    EXPECT_EQ(sll.size(), 100 - i - 1);
   }
 }
