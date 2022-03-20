@@ -9,6 +9,7 @@ add_library(Lib
   ./singly_linkedlist.cpp
   ./singly_linkedlist_queue.cpp
   ./singly_linkedlist_stack.cpp
+  ./doubly_linkedlist.cpp
   )
 
 target_include_directories(Lib

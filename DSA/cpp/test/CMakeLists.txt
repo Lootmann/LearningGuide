@@ -7,10 +7,12 @@ add_executable(test_out
   ./test_array.cpp
   ./test_array_stack.cpp
   ./test_array_queue.cpp
+  ./test_array_minstack.cpp
   ./test_singly_linkedlist.cpp
   ./test_singly_linkedlist_stack.cpp
   ./test_singly_linkedlist_queue.cpp
-  ./test_array_minstack.cpp
+  ./test_doubly_linkedlist.cpp
+  ./test_doubly_linkedlist_deque.cpp
   )
 
 target_link_libraries(
