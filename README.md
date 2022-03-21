@@ -41,6 +41,7 @@ There is a Royal Road to learning.
   - [SQLZOO](https://sqlzoo.net/wiki/SQL_Tutorial)
   - [一週間で身につく MySQL](http://web.sevendays-study.com/mysql/)
   - [SQL 攻略](http://sql.main.jp/)
+    - [x] 1
   - OSS-DB Silver
 
 - DSA
@@ -73,7 +74,7 @@ There is a Royal Road to learning.
 
 - マスタリング TCP/IP
 - 問題解決力を鍛える！アルゴリズムとデータ構造
-- [一週間で身につく MySQL](http://web.sevendays-study.com/mysql/)
+- [SQL 攻略](http://sql.main.jp/)
 - [System Design Primer](https://github.com/donnemartin/system-design-primer)
 
 ## DSA
