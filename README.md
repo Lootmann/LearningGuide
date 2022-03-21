@@ -46,6 +46,7 @@ There is a Royal Road to learning.
 - DSA
 
   - 問題解決力を鍛える！アルゴリズムとデータ構造
+    - [x] 1
   - プログラミングコンテスト攻略のためのアルゴリズムとデータ構造
   - Leetcode
   - AtCoder
@@ -92,6 +93,8 @@ There is a Royal Road to learning.
 - cpp
 
   - 江副
+    - [x] 1
+    - [x] 2
 
 - go
 
@@ -115,11 +118,3 @@ There is a Royal Road to learning.
 - mermaid
 - docker
   - docker 基礎からのコンテナ構築
-
-## Todo
-
-- Languages
-  - cpp
-    - Ezoe
-      - [x] 2
-      - [ ] 3
