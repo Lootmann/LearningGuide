@@ -116,14 +116,6 @@ There is a Royal Road to learning.
 - docker
   - docker 基礎からのコンテナ構築
 
-## PS
-
-プログラマーたちは本当にこれ全部読んでいるのかい？
-
-- Computer Science について
-  どのサイト見てもおすすめの書籍はほとんど変わらない
-  つまり良書
-
 ## Todo
 
 - Languages
