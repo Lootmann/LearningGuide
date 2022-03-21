@@ -1,6 +1,8 @@
 # c++ basic
 
-## Build
+## Building and Compiling
+
+### Build
 
 以下の４つの処理をまとめてビルドと呼ぶ
 
@@ -37,11 +39,17 @@ source file
 実行ファイル (*.out, *.exe)
 ```
 
-## Compile
+### Compile
 
 preprocessor + compiler + assembler の３つの処理を Compile と呼ぶ
 
-## まとめ
+### まとめ
 
 Preprocessor + Compiler + Assembler = Compile
 Compile + Linker = Build
+
+## pre compile header
+
+```bash
+g++ -std=c++2a -Wall -pedantic-errors -x c++-header -o all.hpp.gch all.hpp
+```
