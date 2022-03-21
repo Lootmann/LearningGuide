@@ -123,3 +123,11 @@ There is a Royal Road to learning.
 - Computer Science について
   どのサイト見てもおすすめの書籍はほとんど変わらない
   つまり良書
+
+## Todo
+
+- Languages
+  - cpp
+    - Ezoe
+      - [x] 2
+      - [ ] 3
