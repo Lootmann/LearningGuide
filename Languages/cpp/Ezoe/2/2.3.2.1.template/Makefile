@@ -1,2 +1,12 @@
-run:
-	g++ -std=c++2a -Wall --pedantic-errors -include ../../all.hpp -o program main.cpp
+gcc_options = -std=c++2a -Wall --pedantic-errors
+
+program: main.cpp
+	g++ $(gcc_options) $< -o $@
+
+run: program
+	./program
+
+clean:
+	rm -f ./program
+
+.PHONY: run clean
