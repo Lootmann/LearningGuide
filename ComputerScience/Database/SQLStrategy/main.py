@@ -49,6 +49,15 @@ class DB:
             db.commit()
             cur.close()
 
+    @staticmethod
+    def select_table(sql: str):
+        with sqlite3.connect(DB.DB_NAME) as db:
+            cur = db.cursor()
+            print(">>> {}".format(sql))
+            for row in cur.execute(sql):
+                print(row)
+            cur.close()
+
 
 def main():
     DB.create_table()
