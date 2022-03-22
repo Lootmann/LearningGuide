@@ -99,7 +99,10 @@ There is a Royal Road to learning.
 
 - go
 
-  - Go プログラミング 実践入門
+  - [GoDojo by Tenntenn](http://tenn.in/go)
+  - [Go By Example](https://gobyexample.com/)
+  - [Go with TDD](https://andmorefine.gitbook.io/learn-go-with-tests/)
+  - Go プログラミング 実践入門(あんまり良い本じゃないっぽい)
 
 - js-html-css
 
