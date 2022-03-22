@@ -1,6 +1,6 @@
 # LearningGuide
 
-My Learning Guide.
+My Learning Guide.  
 There is a Royal Road to learning.
 
 ## AWS
@@ -41,13 +41,11 @@ There is a Royal Road to learning.
   - [SQLZOO](https://sqlzoo.net/wiki/SQL_Tutorial)
   - [一週間で身につく MySQL](http://web.sevendays-study.com/mysql/)
   - [SQL 攻略](http://sql.main.jp/)
-    - [x] 1
   - OSS-DB Silver
 
 - DSA
 
   - 問題解決力を鍛える！アルゴリズムとデータ構造
-    - [x] 1
   - プログラミングコンテスト攻略のためのアルゴリズムとデータ構造
   - Leetcode
   - AtCoder
@@ -68,15 +66,6 @@ There is a Royal Road to learning.
   - データ指向アプリケーションデザイン
   - [Distributed Systems](https://www.distributed-systems.net/index.php/books/ds3/)
 
-### Todo
-
-優先度という意味で
-
-- マスタリング TCP/IP
-- 問題解決力を鍛える！アルゴリズムとデータ構造
-- [SQL 攻略](http://sql.main.jp/)
-- [System Design Primer](https://github.com/donnemartin/system-design-primer)
-
 ## DSA
 
 - Data Structures and Algorithms
@@ -94,8 +83,6 @@ There is a Royal Road to learning.
 - cpp
 
   - 江副
-    - [x] 1
-    - [x] 2
 
 - go
 
@@ -122,3 +109,26 @@ There is a Royal Road to learning.
 - mermaid
 - docker
   - docker 基礎からのコンテナ構築
+
+## Todo
+
+優先度という意味で
+
+- マスタリング TCP/IP
+- 問題解決力を鍛える！アルゴリズムとデータ構造
+
+  - [x] 1
+
+- [SQL 攻略](http://sql.main.jp/)
+
+  - [x] 1
+  - [x] 2
+
+- [System Design Primer](https://github.com/donnemartin/system-design-primer)
+
+  - [ ] README
+
+- [ ] 江副
+
+  - [x] 1
+  - [x] 2
