@@ -121,8 +121,24 @@ There is a Royal Road to learning.
 
 - [SQL 攻略](http://sql.main.jp/)
 
-  - [x] 1
-  - [x] 2
+  - [x] 3, 4 select
+  - [x] 5 ORDER BY
+  - [x] 6 Aggregate
+  - [x] 7 Between
+  - [x] 8 Like
+  - [x] 9 Group By
+
+- [System Design Primer](https://github.com/donnemartin/system-design-primer)
+
+  - [ ] README
+
+- [System Design Primer](https://github.com/donnemartin/system-design-primer)
+
+  - [ ] README
+
+- [System Design Primer](https://github.com/donnemartin/system-design-primer)
+
+  - [ ] README
 
 - [System Design Primer](https://github.com/donnemartin/system-design-primer)
 
