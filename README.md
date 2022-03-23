@@ -132,18 +132,6 @@ There is a Royal Road to learning.
 
   - [ ] README
 
-- [System Design Primer](https://github.com/donnemartin/system-design-primer)
-
-  - [ ] README
-
-- [System Design Primer](https://github.com/donnemartin/system-design-primer)
-
-  - [ ] README
-
-- [System Design Primer](https://github.com/donnemartin/system-design-primer)
-
-  - [ ] README
-
 - [ ] 江副
 
   - [x] 1
