@@ -56,6 +56,7 @@ class DB:
             print(">>> {}".format(sql))
             for row in cur.execute(sql):
                 print(row)
+            print()
             cur.close()
 
 
