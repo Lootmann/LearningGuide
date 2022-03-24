@@ -116,3 +116,62 @@ FROM EMP E, DEPT D
 WHERE E.DEPTNO = D.DEPTNO
 """
 DB.select_table(sql)
+
+"""Subquery 副問合せ
+SELECT文の結果を利用して 問い合わせを行う
+WHERE 句が複数のレコードを返すと当然エラーになる
+"""
+title("subquery")
+sql = """
+SELECT *
+FROM EMP
+WHERE EMP.DEPTNO = (
+        SELECT MIN(DEPT.DEPTNO)
+        FROM DEPT
+    )
+"""
+DB.select_table(sql)
+
+"""IN
+DEPTNO IN (10, 30)
+DEPTNO = 10 OR DEPTNO = 30
+
+DEPTNO NOT IN (10, 30)
+DEPTNO != 10 OR DEPTNO != 30
+"""
+
+title("IN")
+sql = """
+SELECT *
+FROM EMP
+WHERE DEPTNO IN (10, 30)
+"""
+DB.select_table(sql)
+
+title("IN subquery")
+sql = """
+SELECT *
+FROM EMP
+WHERE DEPTNO IN (
+    SELECT DEPTNO
+    FROM DEPT
+    WHERE DNAME LIKE '%S%'
+)
+"""
+DB.select_table(sql)
+
+"""
+EXISTS 句の中に書いてあるSQLで抽出されるレコードがある場合は真
+真のときのみ外側のWHERE条件が成立して、レコードが抽出される
+"""
+title("EXISTS")
+
+sql = """
+SELECT ENAME, SAL
+FROM EMP EA
+WHERE NOT EXISTS(
+        SELECT * FROM EMP EB
+        WHERE EB.SAL > EA.SAL
+      )
+"""
+DB.select_table(sql)
