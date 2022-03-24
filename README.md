@@ -65,10 +65,17 @@ There is a Royal Road to learning.
 - python
 
   - django
+
     - Django For Beginners
     - Django for Professionals
     - 実践 Django
     - 自走プログラマー
+
+  - test
+
+    - [doctest](https://docs.python.org/ja/3/library/doctest.html)
+    - [unittest](https://docs.python.org/ja/3/library/unittest.html)
+    - [pytest](https://docs.pytest.org/)
 
 - cpp
 
