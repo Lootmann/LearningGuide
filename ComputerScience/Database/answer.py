@@ -45,3 +45,13 @@ Havingはグループ化した”後”の条件になる
 title("HAVING")
 DB.select_table("SELECT job FROM EMP GROUP BY JOB HAVING AVG(SAL) >= 2500")
 DB.select_table("SELECT DEPTNO, COUNT(*) FROM EMP GROUP BY DEPTNO HAVING COUNT(*) >= 4")
+
+"""DISTINCT
+抽出したレコードから重複した行を排除する
+SELECT の直後に配置する
+SELECTで抽出されたレコードの重複行を削除する
+"""
+title("DISTINCT")
+DB.select_table("SELECT DISTINCT JOB FROM EMP")
+DB.select_table("SELECT DISTINCT DEPTNO FROM EMP")
+DB.select_table("SELECT DISTINCT JOB, SAL FROM EMP")
