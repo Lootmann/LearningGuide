@@ -124,6 +124,13 @@ There is a Royal Road to learning.
   - [x] 7 Between
   - [x] 8 Like
   - [x] 9 Group By
+  - [x] 10 Having
+  - [x] 11 DISTINCT
+  - [x] 12 条件結合
+  - [x] 13 SELECT ALIAS
+  - [x] 14 Subquery
+  - [x] 15 IN, IN subquery
+  - [x] 16 EXISTS
 
 - [System Design Primer](https://github.com/donnemartin/system-design-primer)
 
