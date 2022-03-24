@@ -2,6 +2,23 @@ import sqlite3
 
 
 class DB:
+    """
+    EMP
+        EMPNO       従業員番号  int
+        ENAME       従業員名    str
+        JOB         仕事        str
+        MGR         マネージャー int
+        HIREDATE    採用日付    date
+        SAL         給料        int
+        COMM        歩合給      int
+        DEPTNO      部署番号    int
+
+    DEPT
+        DEPTNO  部署番号    int
+        DNAME   部署名      str
+        LOC     所在地      str
+    """
+
     DB_NAME = "test.db"
 
     EMP_TABLE = """
