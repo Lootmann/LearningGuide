@@ -55,3 +55,64 @@ title("DISTINCT")
 DB.select_table("SELECT DISTINCT JOB FROM EMP")
 DB.select_table("SELECT DISTINCT DEPTNO FROM EMP")
 DB.select_table("SELECT DISTINCT JOB, SAL FROM EMP")
+
+"""INSERT
+INSERT INTO EMP_TEMP
+SELECT *
+FROM   EMP
+WHERE  JOB = 'SALESMAN'
+"""
+
+"""UPDATE
+UPDATE EMP
+SET    SAL = SAL * 1.5
+WHERE  EMPNO = 7369
+"""
+
+"""DELETE
+# Delete all records
+DELETE FROM EMP
+
+# Delete WHERE
+DELETE FROM EMP
+WHERE  EMPNO = 7369
+"""
+
+"""条件結合
+複数の表からのQueryを行う
+"""
+
+title("条件結合")
+sql = """
+SELECT EMP.EMPNO, EMP.ENAME, DEPT.DEPTNO, DEPT.DNAME
+FROM EMP, DEPT
+WHERE EMP.DEPTNO = DEPT.DEPTNO
+"""
+DB.select_table(sql)
+
+sql = """
+SELECT EMP.EMPNO, EMP.ENAME, DEPT.DEPTNO, DEPT.DNAME
+FROM EMP, DEPT
+WHERE EMP.DEPTNO = DEPT.DEPTNO AND EMP.SAL >= 1500
+"""
+DB.select_table(sql)
+
+sql = """
+SELECT EMP.ENAME, DEPT.DNAME
+FROM EMP, DEPT
+WHERE EMP.DEPTNO = DEPT.DEPTNO
+"""
+DB.select_table(sql)
+
+"""ALIAS 別名
+条件結合とやっていることは全く同じ
+表のカラムに別名をつけて、記述を簡素化しみやすくするためのもの
+"""
+
+title("ALIAS")
+sql = """
+SELECT E.ENAME, E.DEPTNO, D.DNAME, D.DEPTNO
+FROM EMP E, DEPT D
+WHERE E.DEPTNO = D.DEPTNO
+"""
+DB.select_table(sql)
