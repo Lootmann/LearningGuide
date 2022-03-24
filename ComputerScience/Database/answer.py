@@ -28,7 +28,20 @@ title("LIKE")
 DB.select_table("select ename from emp where ename like '%A%'")
 DB.select_table("select ename from emp where ename like '%?_%' ESCAPE '?'")
 
+"""Group By
+指定したカラム毎にグループ化し、集合関数の計算結果を取得することができる
+グループ化の方法はグループ化するカラム 'group by' と記述する
+"""
 title("GROUP BY")
 DB.select_table("SELECT JOB, AVG(SAL) FROM EMP GROUP BY JOB")
 DB.select_table("SELECT JOB, AVG(SAL) FROM EMP WHERE DEPTNO <> 10 GROUP BY JOB")
 DB.select_table("SELECT DEPTNO, AVG(SAL) FROM EMP GROUP BY DEPTNO")
+
+"""Having
+HavingはGroup Byに対してチュ出場権を設定することが出来る
+Where条件が Group By でグループ化される前のレコード抽出段階の条件に対して
+Havingはグループ化した”後”の条件になる
+"""
+title("HAVING")
+DB.select_table("SELECT job FROM EMP GROUP BY JOB HAVING AVG(SAL) >= 2500")
+DB.select_table("SELECT DEPTNO, COUNT(*) FROM EMP GROUP BY DEPTNO HAVING COUNT(*) >= 4")
