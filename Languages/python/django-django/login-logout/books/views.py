@@ -1,4 +1,5 @@
 # books/views.py
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.views import generic
 
@@ -11,7 +12,7 @@ class BookIndexView(generic.ListView):
     context_object_name = "books"
 
 
-class BookCreateView(generic.CreateView):
+class BookCreateView(LoginRequiredMixin, generic.CreateView):
     model = BookModel
     template_name = "books/create.html"
     fields = ("name",)

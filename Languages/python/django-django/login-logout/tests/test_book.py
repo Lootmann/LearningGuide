@@ -1,5 +1,5 @@
 # tests/test_book.py
-from django.test import TestCase, Client
+from django.test import TestCase
 from django.urls import reverse
 
 from books.models import BookModel
@@ -33,22 +33,45 @@ class TestBookIndexView(TestCase):
         self.assertEqual(self.url, "/")
 
 
-class TestBookCreateView(TestCase):
+class TestBookCreateViewWithoutLogin(TestCase):
     def setUp(self) -> None:
+        self.client.logout()
         self.url = reverse("books:index")
         self.response = self.client.get(self.url)
 
-    def test_book_model_has_no_record(self):
-        self.assertEqual(BookModel.objects.count(), 0)
-
-    def test_create_view_post(self):
+    def test_create_view_post_without_login(self):
+        """
+        BookCreateView redirects /accounts/login/ when user is not logged int
+        """
         redirect_url = self.client.post(
             reverse("books:create"),
             {
                 "name": "testbook",
             },
         )
+
+        self.assertRedirects(redirect_url, "/accounts/login/?next=/create/")
+
+
+class TestBookCreateViewWithLogin(TestCase):
+    def setUp(self) -> None:
+        user = factory.create_user(
+            username="testuser", email="testemail@example.com", password="testpassword123"
+        )
+        self.client.force_login(user)
+
+    def test_book_model_has_no_record(self):
+        self.assertEqual(BookModel.objects.count(), 0)
+
+    def test_book_create_view(self):
+        redirect_url = self.client.post(
+            reverse("books:create"),
+            {"name": "testbook"},
+        )
         self.assertRedirects(redirect_url, reverse("books:index"))
+
+        self.assertEqual(BookModel.objects.count(), 1)
+        self.assertEqual(BookModel.objects.first().name, "testbook")
 
 
 class TestBookLoginTemplate(TestCase):
@@ -71,12 +94,10 @@ class TestBookLoginTemplate(TestCase):
         )
 
         # login
-        c = Client()
+        # self.client.login(username=user.username, password="testpassword123")
+        self.client.force_login(user)
 
-        # c.login(username=user.username, password="testpassword123")
-        c.force_login(user)
-
-        response = c.get(reverse("books:index"))
+        response = self.client.get(reverse("books:index"))
 
         self.assertEqual(response.status_code, 200)
 
