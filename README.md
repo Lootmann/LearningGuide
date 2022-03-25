@@ -72,9 +72,9 @@ There is a Royal Road to learning.
 
   - test
 
-    - [doctest](https://docs.python.org/ja/3/library/doctest.html)
-    - [unittest](https://docs.python.org/ja/3/library/unittest.html)
-    - [pytest](https://docs.pytest.org/)
+    - [x] [doctest](https://docs.python.org/ja/3/library/doctest.html)
+    - [x] [unittest](https://docs.python.org/ja/3/library/unittest.html)
+    - [x] [pytest](https://docs.pytest.org/)
 
 - cpp
 
