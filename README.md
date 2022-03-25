@@ -44,6 +44,15 @@ There is a Royal Road to learning.
   - マスタリング TCP/IP 入門編
   - Web を支える技術 -HTTP、URI、HTML、そして REST
 
+- Server
+
+  - Nginx
+
+    - [Nginx.co.jp Reference](https://www.nginx.co.jp/blog/what-is-nginx/)
+    - [Nginx.com](https://www.nginx.com/)
+    - [Nginx.org](https://nginx.org/en/docs)
+    - [Nginx Docker](https://hub.docker.com/_/nginx)
+
 - System
 
   - [System Design Primer](https://github.com/donnemartin/system-design-primer)
