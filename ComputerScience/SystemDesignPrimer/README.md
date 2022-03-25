@@ -239,9 +239,6 @@ issues?
 - Caching
 - Database sharding
 
-Discuss potential solutions and trade-offs. Everything is a trade-off. Address bottlenecks using principles of scalable
-system design.
-
 > \#\#\# Step 4: 設計をスケールさせる
 > ボトルネック（全体の処理が遅くなっている、一部の処理や動作こと　そこら編にある飲み物の瓶は口が細くなっていて出力量を著しく制限している）
 > の特定して対処する、与えられた制約に基づいて
@@ -251,3 +248,141 @@ system design.
 > - 水平スケーリング（サーバーの台数増やすこと、Vertical scaling は DB のインスタンスタイプ上げること、容量増やすこととか）
 > - キャッシュ
 > - DB のシャーディング
+
+Discuss potential solutions and trade-offs. Everything is a trade-off. Address bottlenecks using principles of scalable
+system design.
+
+> 潜在的な解答？とトレードオフを議論する すべてのものはトレードオフの関係にある スケーラブルなシステム設計の
+> 原則を利用して、ボトルネックを処理する
+
+### Back-of-the-envelope calculations
+
+You might be asked to do some estimates by hand. Refer to the Appendix for the following resources:
+
+- Use back of the envelope calculations
+- Powers of two table
+- Latency numbers every programmer should know
+
+> \#\#\# 簡単な計算(封筒の裏側を使えば出来るような計算の意味)
+>
+> 手計算で見積もりを行うように求められる場合があります 以下に資源は付録を参照してください
+>
+> - 封筒の裏で研鑽を使用
+> - ２乗の計算テーブル
+> - 全プログラマーが知っているべきレイテンシーナンバー(?)
+
+### Source(s) and further reading
+
+Check out the following links to get a better idea of what to expect:
+
+- How to ace a systems design interview
+- The system design interview
+- Intro to Architecture and Systems Design Interviews
+- System design template
+
+> \#\#\# ソースコードそしてその後に読むもの
+>
+> 期待されているものについての良いよりアイデアを得るためのリンクはこちら
+>
+> - システム設計の面接を ACE する方法
+> - システム設計の面接
+> - アーキテクチャ、そしてシステム設計面接のへの導入
+> - システム設計のテンプレ
+
+## System design interview questions with solutions
+
+Common system design interview questions with sample discussions, code, and diagrams.
+Solutions linked to content in the `solutions/` folder.
+
+> \#\# システム設計の面接 解答付き
+> よくあるシステム設計面接、サンプルな議論、コード、ダイアグラム
+> 解答は `solutions/` folder の中にリンクがついてます
+
+## Object-oriented design interview questions with solutions
+
+## System design topics: start here
+
+New to system design?
+
+First, you'll need a basic understanding of common principles, learning
+about what they are, how they are used, and their props and cons.
+
+> \#\# システム設計トピックス ここあらスタート
+>
+> システム設計は初めてですか
+>
+> まずはじめに、あなたは原理原則の基本的な理解が必要です
+> それらが何で、どうやって使って、それらの利点欠点について学ぶ
+
+### Step 1: Review the scalability video lecture
+
+Scalability Lecture at Harvard
+
+- Topics covered:
+
+  - Vertical scaling
+  - Horizontal scaling
+  - Caching
+  - Load balancing
+  - Database replication
+  - Database partitioning
+
+> \#\#\# Step 1: スケールについての講義ビデオを見る
+>
+> ハーバードのスケーラビィティ講義
+>
+> - カバーしている話題
+>   - 垂直スケーリング
+>   - 水平スケーリング
+>   - キャッシュ
+>   - 負荷分散
+>   - DB のレプリケーション
+>   - DB パーティショニング(テーブル内のデータを分割して保持する機能)
+
+### Step 2: Review the scalability article
+
+Scalability
+
+- Topics covered:
+  - Clones
+  - Databases
+  - Caches
+  - Asynchronism
+
+### Next Steps
+
+Next, we'll look at high-level trade-offs:
+
+- Performance vs scalability
+- Latency vs throughput
+- Avaiability vs consistency
+
+Then we'll dive into more specific topics such as DNS, CDNs, and
+load balancers.
+
+## Performance vs scalability
+
+A service is **scalable** if it results in increased **performance**
+in a manner proportional to resources added. Generally, increasing
+performance means serving more units of work, but it can also be to handle
+larger units of work, such as when datasets grow.
+
+> \#\# パフォーマンス vs 拡張性
+>
+> 追加されたリソースに比例して その結果としてパフォーマンスが
+> 向上するのであれば そのサービスは スケーラブルであるいいます
+> 一般的に パフォーマンスが上がるとは "units of work" をもっとサーブする
+> ことを言います ただ、それは同時に大量のユニットを扱わなければ行けないので
+> データセットが大きくなるときなどです
+
+Another way to look at performance vs scalability:
+
+- If you have a performance problem, your system is slow for a single user.
+- If you have a scalability problem, your system is fast for a single user
+  but slow under heavy load.
+
+> パフォーマンス vs スケーラビリティ の別の観点
+>
+> - もしパフォーマンスに問題があれば、そのシステムは一人のユーザに対して遅い
+> - もし拡張性に問題があれば、そのシステムは一人のユーザに対して早いか
+>   ただ大きい処理のもとでは遅くなります
