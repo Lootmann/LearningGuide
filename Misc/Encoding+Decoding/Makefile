@@ -3,7 +3,7 @@ run:
 
 .PHONY: test
 test:
-	python3 -m test
+	python3 -m test -v
 
 .PHONY: watch
 watch:
