@@ -24,13 +24,6 @@ There is a Royal Road to learning.
   - [SQL 攻略](http://sql.main.jp/)
   - OSS-DB Silver
 
-- DSA
-
-  - 問題解決力を鍛える！アルゴリズムとデータ構造
-  - プログラミングコンテスト攻略のためのアルゴリズムとデータ構造
-  - Leetcode
-  - AtCoder
-
 - Git
 
   - [Git Official ?](https://git-scm.com)
@@ -52,13 +45,19 @@ There is a Royal Road to learning.
   - Web を支える技術 -HTTP、URI、HTML、そして REST
 
 - System
+
   - [System Design Primer](https://github.com/donnemartin/system-design-primer)
-  - データ指向アプリケーションデザイン
   - [Distributed Systems](https://www.distributed-systems.net/index.php/books/ds3/)
+  - データ指向アプリケーションデザイン
 
 ## DSA
 
 - Data Structures and Algorithms
+
+  - 問題解決力を鍛える！アルゴリズムとデータ構造
+  - プログラミングコンテスト攻略のためのアルゴリズムとデータ構造
+  - Leetcode
+  - AtCoder
 
 ## Languages
 
