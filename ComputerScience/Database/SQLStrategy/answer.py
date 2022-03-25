@@ -5,7 +5,7 @@ def title(msg: str, c: int = 8):
 """
 Show ENAME, JOB, and SAL from EMP table
 """
-from SQLStrategy.main import DB
+from main import DB
 
 title("SELECT")
 DB.select_table("SELECT ENAME, JOB, SAL FROM EMP")

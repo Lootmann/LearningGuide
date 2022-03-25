@@ -1,5 +1,5 @@
 run:
-	python3 SQLStrategy/main.py
+	python3 main.py
 
 .PHONY: less
 less:

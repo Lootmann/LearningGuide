@@ -82,14 +82,14 @@ def main():
 
     # EMP
     DB.insert_table(
-        "./SQLStrategy/input_emp",
+        "./input_emp",
         "INSERT INTO EMP (EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO)"
         "VALUES(?,?,?,?,?,?,?,?)",
     )
 
     # DEPT
     DB.insert_table(
-        "./SQLStrategy/input_dept",
+        "./input_dept",
         "INSERT INTO DEPT (DEPTNO, DNAME, LOC) VALUES(?,?,?)",
     )
 
