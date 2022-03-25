@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block extracss %}
+  <link rel="stylesheet" href="{% static 'create.css' %}">
+{% endblock %}
+
+{% block title %}
+  books/create
+{% endblock %}
+
+{% block main %}
+  <h1>books/create.html</h1>
+
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <input type="submit" value="Register">
+  </form>
+{% endblock %}

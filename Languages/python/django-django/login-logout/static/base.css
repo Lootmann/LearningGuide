@@ -1,0 +1,15 @@
+html {
+  background-color: grey;
+}
+
+header {
+  background-color: burlywood;
+
+  font-size: 1.5rem;
+  padding: 1px 0;
+}
+
+header > ul {
+  display: flex;
+  justify-content: space-around;
+}

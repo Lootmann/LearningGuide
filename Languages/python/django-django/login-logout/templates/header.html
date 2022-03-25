@@ -1,0 +1,16 @@
+<header>
+  {% if user.is_authenticated %}
+    <ul>
+      <li>You Logged In : {{ user.username }}</li>
+      <li><a href="{% url 'books:index' %}">book.index</a></li>
+      <li><a href="{% url 'books:create' %}">book.create</a></li>
+      <li><a href="{% url 'accounts:logout' %}">Logout</a></li>
+    </ul>
+  {% else %}
+    <ul>
+      <li>You Don't Login</li>
+      <li><a href="{% url 'accounts:login' %}">Login</a></li>
+      <li><a href="#">SignUp</a></li>
+    </ul>
+  {% endif %}
+</header>
