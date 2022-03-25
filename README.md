@@ -21,8 +21,8 @@ There is a Royal Road to learning.
   - [SQL Course](https://www.sqlcourse.com/)
   - [SQLZOO](https://sqlzoo.net/wiki/SQL_Tutorial)
   - [一週間で身につく MySQL](http://web.sevendays-study.com/mysql/)
-  - [SQL 攻略](http://sql.main.jp/)
   - OSS-DB Silver
+  - [x] [SQL 攻略](http://sql.main.jp/)
 
 - Git
 
