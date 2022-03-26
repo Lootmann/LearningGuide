@@ -18,7 +18,6 @@ There is a Royal Road to learning.
 
 - Database
 
-  - [SQL Course](https://www.sqlcourse.com/)
   - [SQLZOO](https://sqlzoo.net/wiki/SQL_Tutorial)
   - [一週間で身につく MySQL](http://web.sevendays-study.com/mysql/)
   - OSS-DB Silver
