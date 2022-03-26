@@ -1,6 +1,21 @@
 # base64.py
 class Base64:
     @staticmethod
+    def padding(src: list, pad: str, length: int) -> None:
+        """padding
+        padding "pad" to last chunk
+
+        Args:
+            src: list - pass by reference
+            pad: str
+            length: int
+        Returns:
+            None
+        """
+        if len(src[-1]) % length != 0:
+            src[-1] += pad * (length - len(src[-1]) % length)
+
+    @staticmethod
     def ch_to_bit(char: str) -> str:
         """str to 8 bit (ascii code)
 
@@ -21,17 +36,14 @@ class Base64:
         Returns:
             list - ["0100110", "1101001", ...]
         """
-        bits = [Base64.ch_to_bit(ch) for ch in string]
-
-        # padding 0 at last chunk
-        if len(bits[-1]) % 6 != 0:
-            bits[-1] += "0" * (6 - len(bits[-1]) % 6)
-
-        # concat all bits
-        concat = "".join(bits)
+        # string to bit and join bits
+        concat = "".join([Base64.ch_to_bit(ch) for ch in string])
 
         # split by 6 bits
-        splitted = [concat[6 * i : 6 * i + 6] for i in range(len(concat) // 6)]
+        splitted = [concat[i : i + 6] for i in range(0, len(concat), 6)]
+
+        # padding 0 at last chunk
+        Base64.padding(splitted, "0", 6)
 
         return splitted
 
@@ -110,11 +122,13 @@ class Base64:
     @staticmethod
     def encode(phrase: str) -> str:
         """Encode to Base64 format"""
+        # bit to Base64 chars
         converted = [Base64.convert_table(ch) for ch in Base64.split(phrase)]
 
-        # padding =
-        length = len(converted)
-        if length % 4 != 0:
-            converted += ["=" for _ in range(4 - length % 4)]
+        # concat by 4 chars
+        splitted = ["".join(converted[i : i + 4]) for i in range(0, len(converted), 4)]
 
-        return "".join(converted)
+        # padding "="
+        Base64.padding(splitted, "=", 4)
+
+        return "".join(splitted)
