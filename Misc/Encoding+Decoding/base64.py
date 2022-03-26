@@ -7,13 +7,13 @@ class Base64:
 
         Args:
             src: list - pass by reference
-            pad: str
-            length: int
+            pad: str  - a padding char
+            length: int - chunk length
         Returns:
             None
         """
-        if len(src[-1]) % length != 0:
-            src[-1] += pad * (length - len(src[-1]) % length)
+        if len(src[-1]) < length:
+            src[-1] += pad * (length - len(src[-1]))
 
     @staticmethod
     def ch_to_bit(char: str) -> str:
