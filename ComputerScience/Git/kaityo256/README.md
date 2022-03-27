@@ -153,3 +153,51 @@ o -> o -> o
          |
          branch
   ```
+
+### Non Fast-Forawrd
+
+```
+# new branch 'first'
+git checkout -b first
+
+touch hello
+git add hello
+git commit -m "add hello"
+
+touch hello1
+git add hello1
+git commit -m "add hello1"
+
+git checkout main
+git merge --no-ff first # Merge branch 'first'
+
+# new branch 'second'
+git checkout -b second
+touch one
+git add one
+git commit -m "add one"
+
+touch two
+git add two
+git commit -m "add two"
+
+git checkout main
+git merge --no-ff second # Merge branch 'second'
+```
+
+という Git 操作で以下のような `git log` が作られる
+
+```git
+❯ gg
+
+*        e6f638c  11 minutes ago        by"Hoge"    Merge branch 'second'  (HEAD -> main)
+|\
+| *      0091174  12 minutes ago        by"Hoge"    add two  (second)
+| *      9bfc554  12 minutes ago        by"Hoge"    add one
+|/
+*        515f858  13 minutes ago        by"Hoge"    Merge branch 'first'
+|\
+| *      ea13984  13 minutes ago        by"Hoge"    add hello1  (first)
+|/
+*        88f1283  16 minutes ago        by"Hoge"    add hello
+```
