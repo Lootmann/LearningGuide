@@ -41,4 +41,7 @@ func main() {
 	counter.decrement()
 	counter.decrement()
 	fmt.Println(counter.String())
+
+	f := Hex.String
+	fmt.Println(f(hex))
 }
