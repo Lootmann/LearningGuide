@@ -1,0 +1,11 @@
+services:
+  django:
+    build: .
+    command: python3 manage.py runserver 0.0.0.0:8080
+    volumes:
+      - type: bind
+        source: .
+        target: /app
+    ports:
+      - "8080:8080"
+    tty: true
