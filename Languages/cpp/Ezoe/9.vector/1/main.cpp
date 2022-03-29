@@ -1,7 +1,6 @@
 #include "../../all.hpp"
 
-int main() {
-  std::vector<int> v{8, 3, 7, 4, 2, 9, 3};
+void desc(std::vector<int> &v) {
   std::size_t size = v.size();
 
   for (std::size_t head = 0; head != size; ++head) {
@@ -17,10 +16,17 @@ int main() {
     v.at(head) = v.at(min);
     v.at(min) = temp;
   }
+}
+
+int main() {
+  std::vector<int> v{8, 3, 7, 4, 2, 9, 3};
+
+  desc(v);
 
   // index
   for (auto num : v) {
     std::cout << num << " "s;
   }
+
   std::cout << "\n"s;
 }
