@@ -201,3 +201,66 @@ git merge --no-ff second # Merge branch 'second'
 |/
 *        88f1283  16 minutes ago        by"Hoge"    add hello
 ```
+
+## branch switch
+
+```
+❯ git init
+❯ touch README.md
+❯ git add .
+❯ git commit -m "add README"
+❯ git branch new_branch
+❯ git switch new_branch
+
+❯ touch b
+❯ git add .
+❯ git commit -m "add b"
+❯ git switch main
+❯ git merge --no-ff new_branch
+
+❯ gg
+*   0854eec - (HEAD -> master) Merge branch 'new_branch' (49 seconds ago) <Lootmann>
+|\
+| * eab5e56 - (new_branch) add b (2 minutes ago) <Lootmann>
+|/
+* 02091df - first commit (3 minutes ago) <Lootmann>
+
+❯ git branch fix_master
+❯ git switch fix_master
+
+❯ touch d
+❯ git add .
+❯ git commit -m "add d"
+❯ touch e
+❯ git add .
+❯ git commit -m "add e"
+
+❯ gg
+* 26d8e13 - (HEAD -> fix_master) add e (2 seconds ago) <Lootmann>
+* f80a3ab - add d (9 seconds ago) <Lootmann>
+*   0854eec - (master) Merge branch 'new_branch' (2 minutes ago) <Lootmann>
+|\
+| * eab5e56 - (new_branch) add b (2 minutes ago) <Lootmann>
+|/
+* 02091df - first commit (4 minutes ago) <Lootmann>
+
+❯ git branch
+* fix_master
+  master
+  new_branch
+
+❯ git switch master
+❯ git merge --no-ff fix_master
+
+❯ gg
+*   020cbef - (HEAD -> master) Merge branch 'fix_master' (3 seconds ago) <Lootmann>
+|\
+| * 26d8e13 - (fix_master) add e (17 seconds ago) <Lootmann>
+| * f80a3ab - add d (24 seconds ago) <Lootmann>
+|/
+*   0854eec - Merge branch 'new_branch' (2 minutes ago) <Lootmann>
+|\
+| * eab5e56 - (new_branch) add b (3 minutes ago) <Lootmann>
+|/
+* 02091df - first commit (4 minutes ago) <Lootmann>
+```
