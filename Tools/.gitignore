@@ -5,3 +5,6 @@ build/
 # pdf
 *.xopp
 *.xopp~
+
+# python
+venv/
