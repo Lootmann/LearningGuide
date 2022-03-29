@@ -1,0 +1,10 @@
+services:
+  app:
+    container_name: python_container
+    # restart: always
+    build: .
+    command: python3 main.py
+    volumes:
+      - type: bind
+        source: .
+        target: /code
