@@ -336,3 +336,51 @@ Merge made by the 'recursive' strategy.
 |/
 * 97f04b6 - first commit - add a (74 seconds ago) <Lootmann>
 ```
+
+## bisect
+
+```bash
+❯ ls
+my_math.py
+
+❯ git bisect start master cd24f7a
+Bisecting: 2 revisions left to test after this (roughly 2 steps)
+[10700b38e57bb949f421f5cb1c892b7a74e5c58c] add function format()
+
+❯ cat my_math.py
+...
+
+❯ git bisect bad
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[b3c90becfdc2857fa1be829be81f220a1e2f6bd7] fix add
+
+❯ cat my_math.py
+...
+
+# this commit has a bad thing.
+❯ git bisect bad
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[3e8bb4634cc22ee372bb3f2bc9bc7fe2f373fbc3] is_bigger, is_smaller
+
+❯ cat my_math.py
+...
+
+# this commit has a good thing.
+❯ git bisect good
+b3c90becfdc2857fa1be829be81f220a1e2f6bd7 is the first bad commit
+commit b3c90becfdc2857fa1be829be81f220a1e2f6bd7
+Date:   Sun Apr 3 00:12:31 2022 +0900
+
+    fix add
+
+ my_math.py | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+# mark bug branch
+❯ git branch bug b3c90be
+
+# quit bisect mode
+❯ git bisect reset
+Previous HEAD position was 3e8bb46 is_bigger, is_smaller
+Switched to branch 'master'
+```
