@@ -264,3 +264,75 @@ git merge --no-ff second # Merge branch 'second'
 |/
 * 02091df - first commit (4 minutes ago) <Lootmann>
 ```
+
+## stash
+
+```bash
+❯ git init
+❯ touch a
+❯ git add .
+❯ gcm "first commit - add a"
+[master (root-commit) 97f04b6] first commit - add a
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a
+
+❯ touch b
+❯ touch c
+❯ touch d
+❯ git add .
+
+❯ gs
+ブランチ master
+コミット予定の変更点:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   b
+        new file:   c
+        new file:   d
+
+
+# ここでWorkingTreeをStackに退避
+❯ git stash
+Saved working directory and index state WIP on master: 97f04b6 first commit - add a
+
+❯ git switch -c feature
+Switched to a new branch 'feature'
+
+# WorkingTree にPop
+❯ git stash pop
+ブランチ feature
+コミット予定の変更点:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   b
+        new file:   c
+        new file:   d
+
+Dropped refs/stash@{0} (999912a0149fc89f26243967111dd0a4ca7cbc6c)
+
+❯ git add .
+
+❯ gcm "add b, c, d"
+[feature 28b3bf2] add b, c, d
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 b
+ create mode 100644 c
+ create mode 100644 d
+
+❯ git switch master
+❯ git merge feature
+Merge made by the 'recursive' strategy.
+ b | 0
+ c | 0
+ d | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 b
+ create mode 100644 c
+ create mode 100644 d
+
+# cool
+❯ gg
+*   94386cf - (HEAD -> master) Merge branch 'feature' (2 seconds ago) <Lootmann>
+|\
+| * 28b3bf2 - (feature) add b, c, d (18 seconds ago) <Lootmann>
+|/
+* 97f04b6 - first commit - add a (74 seconds ago) <Lootmann>
+```
