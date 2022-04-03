@@ -25,10 +25,10 @@ There is a Royal Road to learning.
 
 - Git
 
-  - [ ] [GitHub 演習](https://github.com/kaityo256/github)
-  - [Git Official ?](https://git-scm.com)
   - [.git の中身を見てみよう](https://qiita.com/tatane616/items/dbad66179754be57d2e2)
+  - [Git Official ?](https://git-scm.com)
   - [Write yourself a Git!](https://wyag.thb.lt/)
+  - [x] [GitHub 演習](https://github.com/kaityo256/github)
 
 - Hardware
 
