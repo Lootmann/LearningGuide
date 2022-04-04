@@ -17,6 +17,7 @@ services:
         target: /docker-entrypoint-initdb.d
     ports:
       - 3306
+    tty: true
 
 volumes:
   mysql-db:
