@@ -18,16 +18,16 @@ There is a Royal Road to learning.
 
 - Database
 
+  - [ ] [一週間で身につく MySQL](http://web.sevendays-study.com/mysql/)
   - [SQLZOO](https://sqlzoo.net/wiki/SQL_Tutorial)
-  - [一週間で身につく MySQL](http://web.sevendays-study.com/mysql/)
   - OSS-DB Silver
   - [x] [SQL 攻略](http://sql.main.jp/)
 
 - Git
 
-  - [.git の中身を見てみよう](https://qiita.com/tatane616/items/dbad66179754be57d2e2)
   - [Git Official ?](https://git-scm.com)
   - [Write yourself a Git!](https://wyag.thb.lt/)
+  - [x] [.git の中身を見てみよう](https://qiita.com/tatane616/items/dbad66179754be57d2e2)
   - [x] [GitHub 演習](https://github.com/kaityo256/github)
 
 - Hardware
