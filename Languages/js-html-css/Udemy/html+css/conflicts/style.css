@@ -1,0 +1,22 @@
+/*
+  conflict css settings
+*/
+html {
+  background-color: grey;
+}
+
+.author {
+  font-style: italic;
+  background-color: blue;
+}
+
+#author-text {
+  /* collision */
+  background-color: green;
+}
+
+p,
+li {
+  /* collision */
+  background-origin: red;
+}
