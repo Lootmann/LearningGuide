@@ -1,0 +1,26 @@
+* {
+  border-bottom: 3px solid red;
+}
+
+html {
+  background-color: grey;
+}
+
+body {
+  font-size: 40px;
+}
+
+nav {
+  background-color: blanchedalmond;
+  font-size: 30px;
+}
+
+h1 {
+  font-size: 20px;
+  background-color: azure;
+}
+
+p {
+  font-size: 10px;
+  background-color: antiquewhite;
+}
