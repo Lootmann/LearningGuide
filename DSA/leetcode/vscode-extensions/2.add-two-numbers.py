@@ -20,34 +20,29 @@ class ListNode:
 
 
 class Solution:
+    def sumList(lst: Optional[ListNode]) -> int:
+        digit = 1
+        total = 0
+        while lst:
+            total += lst.val * digit
+            lst = lst.next
+            digit *= 10
+        return total
+
     def addTwoNumbers(
         self, l1: Optional[ListNode], l2: Optional[ListNode]
     ) -> Optional[ListNode]:
 
-        answer = result = ListNode(0)
-        advance = False
+        total = Solution.sumList(l1) + Solution.sumList(l2)
+        answer = tmp = ListNode(0)
 
-        while l1 or l2 or advance:
-            current = 0
+        if total == 0:
+            return answer
 
-            if advance:
-                current += 1
-                advance = False
-
-            if l1:
-                current += l1.val
-                l1 = l1.next
-
-            if l2:
-                current += l2.val
-                l2 = l2.next
-
-            if current >= 10:
-                current -= 10
-                advance = True
-
-            result.next = ListNode(current)
-            result = result.next
+        while total > 0:
+            tmp.next = ListNode(total % 10)
+            total //= 10
+            tmp = tmp.next
 
         return answer.next
 
