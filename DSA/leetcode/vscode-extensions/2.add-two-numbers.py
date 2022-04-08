@@ -24,11 +24,10 @@ class Solution:
         self, l1: Optional[ListNode], l2: Optional[ListNode]
     ) -> Optional[ListNode]:
 
-        result = ListNode(-1)
-        answer = result
+        answer = result = ListNode(0)
         advance = False
 
-        while not (l1 is None and l2 is None and advance is False):
+        while l1 or l2 or advance:
             current = 0
 
             if advance:
@@ -47,13 +46,10 @@ class Solution:
                 current -= 10
                 advance = True
 
-            if result.val == -1:
-                result.val = current
-            else:
-                result.next = ListNode(current)
-                result = result.next
+            result.next = ListNode(current)
+            result = result.next
 
-        return answer
+        return answer.next
 
 
 # @lc code=end
