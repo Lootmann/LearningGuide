@@ -12,3 +12,9 @@
   - [1337.The K Weakest Rows in a Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix)
   - [1342. Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/)
   - [1672.Richest Custom Wealth](https://leetcode.com/problems/richest-customer-wealth/)
+
+
+- [Top Interview Questions](https://leetcode.com/problem-list/top-interview-questions/)
+  - [x] 1. Two Sum
+  - [x] 2. Add Two Numbers
+  - [x] 7. Reverse Integer
