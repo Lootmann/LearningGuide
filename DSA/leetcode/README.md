@@ -17,5 +17,5 @@
 - [Top Interview Questions](https://leetcode.com/problem-list/top-interview-questions/)
   - [x] 1. Two Sum
   - [x] 2. Add Two Numbers
-  - [x] 4. Median of Two Sorted Array
+  - [x] 4. Median of Two Sorted Array (needs Refactor)
   - [x] 7. Reverse Integer
