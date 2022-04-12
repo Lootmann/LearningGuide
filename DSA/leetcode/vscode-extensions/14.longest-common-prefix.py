@@ -9,22 +9,21 @@ from typing import List
 # @lc code=start
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
+        if len(strs) == 1:
+            return strs[0]
+
         shortest = min(strs, key=len)
-        prefixes = []
+        ans = ""
 
-        for i, prefix in enumerate(shortest):
-            is_match = True
+        for i, _ in enumerate(shortest):
+            prefixes = [str[: i + 1] for str in strs]
 
-            for j in range(len(strs)):
-                if strs[j][i] != prefix:
-                    is_match = False
-
-            if not is_match:
+            if not all(prefixes[0] == elem for elem in prefixes):
                 break
 
-            prefixes.append(prefix)
+            ans = prefixes[0]
 
-        return "".join(prefixes)
+        return ans
 
 
 # @lc code=end
