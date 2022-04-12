@@ -515,6 +515,19 @@ recent write or an error.
 CAP 理論の”一貫性”の定義を思い返してほしい あらゆる読み取りは、直近の書き込みを取得もしくはエラーであると
 ```
 
+### Weak Consistency
+
+After a while, reads may or may not see it. A best effort approach is taken.
+
+This approach is seen in systems such as memcached. Weak consistency
+works well in real time use cases such as VoIP, video chat, and realtime
+multiplayer games. For example, if you are on a phone call and lose reception
+for a few seconds, when you regain connection you do not hear what was spoken
+during connection loss.
+
+```
+```
+
 ## Terms
 
 Atomic : トランザクションに含まれるタスクが全て実行されるか
