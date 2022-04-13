@@ -18,8 +18,8 @@ There is a Royal Road to learning.
 
 - Database
 
+  - [OSS-DB Silver](https://github.com/Lootmann/LearningGuide/issues/59)
   - [SQLZOO](https://sqlzoo.net/wiki/SQL_Tutorial)
-  - OSS-DB Silver
   - [x] [一週間で身につく MySQL](http://web.sevendays-study.com/mysql/)
   - [x] [SQL 攻略](http://sql.main.jp/)
 
@@ -38,8 +38,8 @@ There is a Royal Road to learning.
 
 - Network
 
-  - マスタリング TCP/IP 入門編
-  - Web を支える技術 -HTTP、URI、HTML、そして REST
+  - [マスタリング TCP/IP 入門編](https://github.com/Lootmann/LearningGuide/issues/31)
+  - Web を支える技術 - HTTP、URI、HTML、そして REST
 
 - Server
 
@@ -60,7 +60,7 @@ There is a Royal Road to learning.
 
 - Data Structures and Algorithms
 
-  - 問題解決力を鍛える！アルゴリズムとデータ構造
+  - [問題解決力を鍛える！アルゴリズムとデータ構造](https://github.com/Lootmann/LearningGuide/issues/32)
   - プログラミングコンテスト攻略のためのアルゴリズムとデータ構造
   - Leetcode
   - AtCoder
@@ -71,9 +71,9 @@ There is a Royal Road to learning.
 
   - django
 
+    - [実践 Django](https://github.com/Lootmann/LearningGuide/issues/58)
     - Django For Beginners
     - Django for Professionals
-    - 実践 Django
     - 自走プログラマー
 
   - test
@@ -85,7 +85,7 @@ There is a Royal Road to learning.
 
 - cpp
 
-  - 江副
+  - [江副](https://github.com/Lootmann/LearningGuide/issues/34)
 
 - go
 
@@ -96,15 +96,8 @@ There is a Royal Road to learning.
 
 - js-html-css
 
-  - HTML+CSS
-
-    - Flexbox
-    - Grid Layout
-
-  - JavaScript
-
-    - Basics
-    - Canvas
+  - [Jonas HTML+CSS](https://github.com/Lootmann/LearningGuide/issues/37)
+  - [Jonas JavaScript](https://github.com/Lootmann/LearningGuide/issues/36)
 
 ## Tools
 
