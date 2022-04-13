@@ -9,16 +9,17 @@ from typing import List
 # @lc code=start
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
-        total = 0
-        for i, num in enumerate(digits):
-            total += num * 10 ** (len(digits) - i - 1)
+        digits = digits[::-1]
+        digits[0] += 1
 
-        total += 1
-        digits = []
+        for i in range(len(digits) - 1):
+            if digits[i] >= 10:
+                digits[i] -= 10
+                digits[i + 1] += 1
 
-        while total > 0:
-            digits.append(total % 10)
-            total //= 10
+        if digits[-1] >= 10:
+            digits[-1] -= 10
+            digits.append(1)
 
         return digits[::-1]
 
