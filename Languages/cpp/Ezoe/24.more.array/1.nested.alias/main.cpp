@@ -1,10 +1,10 @@
 #include "../../all.hpp"
 
 template <typename T, std::size_t N>
-struct array {
+struct Array {
   using value_type = T;
-  using reference = T&;
-
+  using reference = T &;
+  using const_reference = T const &;
   using size_type = std::size_t;
 
   value_type storage[N];
@@ -12,24 +12,25 @@ struct array {
   reference operator[](size_type i) {
     return storage[i];
   }
-};
 
-struct S {
-  using number = int;
-  number data;
-};
+  // can't change cause const
+  const_reference operator[](size_type i) const {
+    return storage[i];
+  }
 
-auto print = [](auto x) {
-  std::cout << x << "\n"s;
+  size_type size() const {
+    return N;
+  }
 };
+template <typename Array>
+void print(Array const &c) {
+  for (std::size_t i = 0; i < c.size(); ++i) {
+    std::cout << c[i];
+  }
+}
 
 int main() {
-  using number = int;
-  number x = 123;
+  Array<int, 5> a = {1, 2, 3, 4, 5};
 
-  print(x);
-
-  S s{123};
-  S::number y = s.data;
-  print(y);
+  print(a);
 }
