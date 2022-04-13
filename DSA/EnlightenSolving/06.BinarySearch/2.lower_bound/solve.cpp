@@ -7,8 +7,11 @@ bool is_ok(int x) {
 
 // lower_bound
 int binary_search(int ng, int ok) {
+  cout << "ng  ok  [mid]" << '\n';
+
   while (abs(ok - ng) > 1) {
     int mid = (ok + ng) / 2;
+    cout << ng << "  " << ok << "  [" << mid << "]" << '\n';
 
     if (is_ok(mid))
       ok = mid;
