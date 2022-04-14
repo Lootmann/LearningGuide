@@ -9,14 +9,14 @@ from typing import List
 # @lc code=start
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
-        total = -(10**8)
+        total = 0
+        max_total = -(10**8)
 
-        for i in range(len(nums) + 1):
-            for j in range(len(nums)):
-                if i != 0:
-                    total = max(total, sum(nums[j : j + i]))
+        for num in nums:
+            total = max(num, total + num)
+            max_total = max(max_total, total)
 
-        return total
+        return max_total
 
 
 # @lc code=end
