@@ -78,10 +78,36 @@ struct array_iterator {
   }
 };
 
+template <typename Array>
+struct array_const_iterator {
+  Array const &a;
+  std::size_t i;
+  array_const_iterator(Array const &a, std::size_t i) : a(a), i(i) {}
+  array_const_iterator(typename array_iterator<Array>::iterator const &iter)
+      : a(iter.a), i(iter.i) {}
+
+  array_const_iterator &operator++() {
+    ++i;
+    return *this;
+  }
+
+  typename Array::const_reference operator*() const {
+    return a[i];
+  }
+
+  typename Array::const_reference operator[](std::size_t i) const {
+    return *(*this + i);
+  }
+};
+
+// Array
 template <typename T, std::size_t N>
 struct Array {
   // iterator
   using iterator = array_iterator<Array>;
+
+  // const iterator
+  using const_iterator = array_const_iterator<Array>;
 
   iterator begin() {
     return array_iterator(*this, 0);
@@ -101,6 +127,13 @@ struct Array {
 
   reference operator[](size_type i) {
     return storage[i];
+  }
+
+  reference at(std::size_t n) {
+    if (n >= size()) {
+      throw std::out_of_range("Error: out of Range");
+    }
+    return storage[n];
   }
 
   // can't change cause const
@@ -193,5 +226,10 @@ int main() {
     p(n <= m);
     p(n > m);
     p(n >= m);
+  }
+
+  {
+    a.at(5);
+    a.at(6);
   }
 }
