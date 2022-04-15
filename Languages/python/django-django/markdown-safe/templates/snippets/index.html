@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  snippet/title
+{% endblock %}
+
+{% block main %}
+  <h1>snippet/title</h1>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for snippet in snippets %}
+      <tr>
+        <td>
+          <a href="{% url 'snippets:detail' snippet.id %}">
+            {{ snippet.title }}
+          </a>
+        </td>
+        <td>{{ snippet.short_text }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

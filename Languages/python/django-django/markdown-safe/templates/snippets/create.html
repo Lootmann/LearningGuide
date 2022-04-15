@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block extracss %}
+  <link rel="stylesheet" href="{% static 'form.css' %}">
+{% endblock %}
+
+{% block title %}
+  snippet/create
+{% endblock %}
+
+{% block main %}
+  <h1>snippet/create</h1>
+
+  <form action="" method="post" class="mt-1">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <input type="submit" value="Register">
+  </form>
+{% endblock %}

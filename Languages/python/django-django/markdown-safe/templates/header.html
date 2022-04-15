@@ -1,0 +1,13 @@
+{% load static %}
+
+{% block extracss %}
+  <link rel="stylesheet" href="{% static 'base.css' %}">
+{% endblock %}
+
+<header class="header">
+  <ul>
+    <li><a href="{% url 'snippets:index' %}">Index</a></li>
+    <li><a href="{% url 'snippets:create' %}">Create</a></li>
+  </ul>
+</header>
+

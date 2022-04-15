@@ -1,0 +1,11 @@
+input {
+  font-size: 2rem;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+
+textarea {
+  font-size: 2rem;
+  padding: 0.5rem;
+  margin: 1rem;
+}
