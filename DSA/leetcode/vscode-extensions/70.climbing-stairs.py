@@ -11,15 +11,11 @@ class Solution:
         if n == 1:
             return 1
 
-        stairs = [0] * n
+        a, b = 1, 2
+        for _ in range(2, n):
+            a, b = b, a + b
 
-        stairs[0] = 1
-        stairs[1] = 2
-
-        for i in range(2, n):
-            stairs[i] = stairs[i - 1] + stairs[i - 2]
-
-        return stairs[-1]
+        return b
 
 
 # @lc code=end
