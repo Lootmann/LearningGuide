@@ -17,8 +17,9 @@ There is a Royal Road to learning.
   - The art of Readable Code
 
 - Database
-  - [OSS-DB Silver](https://github.com/Lootmann/LearningGuide/issues/59)
-  - [SQLZOO](https://sqlzoo.net/wiki/SQL_Tutorial)
+  - [ ] [OSS-DB Silver](https://github.com/Lootmann/LearningGuide/issues/59)
+  - [ ] [SQLZOO](https://sqlzoo.net/wiki/SQL_Tutorial)
+  - [ ] [AI Shift - Exercise](https://www.ai-shift.co.jp/techblog/1980)
   - [x] [一週間で身につく MySQL](http://web.sevendays-study.com/mysql/)
   - [x] [SQL 攻略](http://sql.main.jp/)
 
@@ -87,15 +88,33 @@ There is a Royal Road to learning.
   - [Jonas JavaScript](https://github.com/Lootmann/LearningGuide/issues/36)
 
 
+## Misc
+
+- Encoding/Decoding
+  - [x] Base62
+  - [ ] Base64
+
+- Web
+  - [ ] [Web技術の基本](https://www.amazon.co.jp/dp/B06XNMMC9S/)
+  - [ ] [Webを支える技術](https://www.amazon.co.jp/dp/4774142042)
+
+- Security
+  - [ ] [InfraEngineer](https://toumasblog.org/infra-engineer-basic/#toc2)
+  - [ ] [WebApp](https://speakerdeck.com/cybozuinsideout/web-application-overview-2021)
+  - [ ] [Security 101 - Cybouz](https://speakerdeck.com/cybozuinsideout/security-2021)
+  - [ ] [X.509](https://qiita.com/TakahikoKawasaki/items/4c35ac38c52978805c69)
+  - [ ] [Web Application](https://speakerdeck.com/cybozuinsideout/web-application-overview-2021)
+
+- Machine Learning
+  - [ ] [How to become Machine Learning Engineer](https://qiita.com/KangsooKim/items/8d987a7089297068477b)
+
+
 ## Tools
 
 - [x] google-test
-
 - [ ] mermaid
-
 - docker
   - [x] docker 基礎からのコンテナ構築
-
 - docker-compose
   - [docker-compose Overview](https://docs.docker.com/compose/)
   - [docker-compose spec](https://github.com/compose-spec/compose-spec/blob/master/spec.md)
