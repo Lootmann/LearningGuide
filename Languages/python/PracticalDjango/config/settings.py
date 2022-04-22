@@ -17,6 +17,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # third app
+    "django_extensions",
+    # custom app
     "snippets.apps.SnippetsConfig",
 ]
 
