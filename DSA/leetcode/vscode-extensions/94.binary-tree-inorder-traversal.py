@@ -16,23 +16,19 @@ class TreeNode:
 # @lc code=start
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        result = list()
+        res, stack = [], []
+        node = root
 
-        def dfs(node: TreeNode):
-            if node is None:
-                return
+        while stack != [] or node is not None:
+            if node is not None:
+                stack.append(node)
+                node = node.left
+            else:
+                node = stack.pop()
+                res.append(node.val)
+                node = node.right
 
-            if node.left is not None:
-                dfs(node.left)
-
-            result.append(node.val)
-
-            if node.right is not None:
-                dfs(node.right)
-
-        dfs(root)
-
-        return result
+        return res
 
 
 # @lc code=end
