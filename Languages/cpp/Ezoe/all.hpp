@@ -21,6 +21,7 @@
 
 #include <algorithm>
 #include <array>
+#include <bit>
 #include <cfenv>
 #include <cmath>
 #include <deque>
