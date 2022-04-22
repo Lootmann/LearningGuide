@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Django Snippet</title>
+</head>
+
+<body>
+<div>
+  <h2>{{ snippet.title }} by {{ snippet.created_by.username }}</h2>
+  <small>Posted At: {{ snippet.created_at }}</small>
+  <pre>{{ snippet.code }}</pre>
+  <p>{{ snippet.description }}</p>
+</div>
+</body>
+</html>
