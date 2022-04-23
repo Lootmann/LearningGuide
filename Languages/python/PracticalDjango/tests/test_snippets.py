@@ -76,7 +76,8 @@ class CreateSnippetTest(TestCase):
             "code": "print(123)",
             "description": "description",
         }
-        self.client.post("snippets/new/", data)
+        response = self.client.post("/snippets/new/", data)
+        print(response.status_code)
 
         snippet = Snippet.objects.get(title="django title")
         self.assertEqual("print(123)", snippet.code)

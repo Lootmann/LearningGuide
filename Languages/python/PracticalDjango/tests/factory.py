@@ -4,7 +4,7 @@ UserModel = get_user_model()
 
 
 def create_user(username: str, email: str, password: str) -> UserModel:
-    return UserModel.object.create(
+    return UserModel.objects.create(
         username=username,
         email=email,
         password=password,
