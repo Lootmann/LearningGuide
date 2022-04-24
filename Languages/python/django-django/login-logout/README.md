@@ -1,7 +1,13 @@
 # Django without docker
 
-- [ ] accounts test
-- [ ] books test
+- accounts
+    - test
+        - [x] custom login
+        - [x] custom logout
+        - [x] custom signup
 
-- [ ] add LoginRequiredMixin books:index
-- [ ] add LoginRequiredMixin books:create
+- books
+    - [ ] test
+    - [ ] views
+        - [ ] add LoginRequiredMixin books:index
+        - [ ] add LoginRequiredMixin books:create
