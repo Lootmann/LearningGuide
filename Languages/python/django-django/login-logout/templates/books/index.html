@@ -12,23 +12,25 @@
 {% endblock %}
 
 {% block main %}
-  <h1>books/index.html</h1>
+  <div class="container">
+    <h1>books/index.html</h1>
 
-  <table>
-    <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    {% for book in books %}
+    <table>
+      <thead>
       <tr>
-        <td>{{ book.id }}</td>
-        <td>{{ book.name }}</td>
+        <th>ID</th>
+        <th>Name</th>
       </tr>
-    {% endfor %}
-    </tbody>
-  </table>
+      </thead>
+
+      <tbody>
+      {% for book in books %}
+        <tr>
+          <td>{{ book.id }}</td>
+          <td>{{ book.name }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
 {% endblock %}

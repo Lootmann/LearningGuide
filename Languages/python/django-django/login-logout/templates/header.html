@@ -1,4 +1,10 @@
-<header>
+{% load static %}
+
+{% block extracss %}
+  <link rel="stylesheet" href="{% static 'header.css' %}">
+{% endblock %}
+
+<header class="header">
   {% if user.is_authenticated %}
     <ul>
       <li>You Logged In : {{ user.username }}</li>
@@ -10,7 +16,7 @@
     <ul>
       <li>You Don't Login</li>
       <li><a href="{% url 'accounts:login' %}">Login</a></li>
-      <li><a href="#">SignUp</a></li>
+      <li><a href="{% url 'accounts:signup' %}">SignUp</a></li>
     </ul>
   {% endif %}
 </header>

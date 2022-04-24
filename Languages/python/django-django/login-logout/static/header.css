@@ -1,0 +1,21 @@
+.header {
+  background-color: burlywood;
+  padding: 0.5rem 0;
+}
+
+.header > ul{
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.header > ul > li {
+  font-size: 2rem;
+}
+
+#main {}
+
+.container {
+  padding: 2rem 1rem;
+}
+
