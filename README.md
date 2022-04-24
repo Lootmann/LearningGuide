@@ -35,8 +35,16 @@ There is a Royal Road to learning.
   - コンピュータの構成と設計 MIPS Edition
 
 - Network
-  - [マスタリング TCP/IP 入門編](https://github.com/Lootmann/LearningGuide/issues/31)
-  - Web を支える技術 - HTTP、URI、HTML、そして REST
+  - [ ] [Mastering TCP/IP](https://github.com/Lootmann/LearningGuide/issues/31)
+  - [ ] [Web技術の基本 - HTTP, URI, HTML and REST](https://www.amazon.co.jp/dp/B06XNMMC9S/)
+  - [ ] [Webを支える技術](https://www.amazon.co.jp/dp/4774142042)
+
+- Security
+  - [ ] [InfraEngineer](https://toumasblog.org/infra-engineer-basic/#toc2)
+  - [ ] [WebApp](https://speakerdeck.com/cybozuinsideout/web-application-overview-2021)
+  - [ ] [Security 101 - Cybouz](https://speakerdeck.com/cybozuinsideout/security-2021)
+  - [ ] [X.509](https://qiita.com/TakahikoKawasaki/items/4c35ac38c52978805c69)
+  - [ ] [Web Application](https://speakerdeck.com/cybozuinsideout/web-application-overview-2021)
 
 - Server
   - Nginx
@@ -55,7 +63,7 @@ There is a Royal Road to learning.
 
 - Data Structures and Algorithms
   - [問題解決力を鍛える！アルゴリズムとデータ構造](https://github.com/Lootmann/LearningGuide/issues/32)
-  - [Leetcode](https://leetcode.com/problemset/all/)
+  - [Leetcode](https://leetcode.com/problemset/all/) [- Issue](https://github.com/Lootmann/LearningGuide/issues/60)
   - プログラミングコンテスト攻略のためのアルゴリズムとデータ構造
   - AtCoder
 
@@ -63,7 +71,7 @@ There is a Royal Road to learning.
 ## Languages
 
 - python
-  - django
+  - [django](https://www.djangoproject.com/)
     - [実践 Django](https://github.com/Lootmann/LearningGuide/issues/58)
     - Django For Beginners
     - Django for Professionals
@@ -74,9 +82,6 @@ There is a Royal Road to learning.
     - [x] [unittest](https://docs.python.org/ja/3/library/unittest.html)
     - [x] [pytest](https://docs.pytest.org/)
     - [x] [pytest-cov](https://pytest-cov.readthedocs.io/en/latest/)
-
-- cpp
-  - [江副](https://github.com/Lootmann/LearningGuide/issues/34)
 
 - go
   - [GoDojo by Tenntenn](http://tenn.in/go)
@@ -94,28 +99,24 @@ There is a Royal Road to learning.
   - [x] Base62
   - [ ] Base64
 
-- Web
-  - [ ] [Web技術の基本](https://www.amazon.co.jp/dp/B06XNMMC9S/)
-  - [ ] [Webを支える技術](https://www.amazon.co.jp/dp/4774142042)
-
-- Security
-  - [ ] [InfraEngineer](https://toumasblog.org/infra-engineer-basic/#toc2)
-  - [ ] [WebApp](https://speakerdeck.com/cybozuinsideout/web-application-overview-2021)
-  - [ ] [Security 101 - Cybouz](https://speakerdeck.com/cybozuinsideout/security-2021)
-  - [ ] [X.509](https://qiita.com/TakahikoKawasaki/items/4c35ac38c52978805c69)
-  - [ ] [Web Application](https://speakerdeck.com/cybozuinsideout/web-application-overview-2021)
-
 - Machine Learning
   - [ ] [How to become Machine Learning Engineer](https://qiita.com/KangsooKim/items/8d987a7089297068477b)
 
 
 ## Tools
 
-- [x] google-test
-- [ ] mermaid
+- [x] [GoogleTest](https://google.github.io/googletest/)
+- [ ] [Mermaid](https://mermaid-js.github.io/mermaid/#/)
+
 - docker
   - [x] docker 基礎からのコンテナ構築
+
 - docker-compose
   - [docker-compose Overview](https://docs.docker.com/compose/)
   - [docker-compose spec](https://github.com/compose-spec/compose-spec/blob/master/spec.md)
   - [docker-compose v2](https://zenn.dev/miroha/articles/whats-docker-compose-v2)
+
+
+## Next
+
+- [Cpp Ezoe](https://github.com/Lootmann/LearningGuide/issues/34)
