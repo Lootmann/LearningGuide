@@ -1,19 +1,12 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Django Snippet</title>
-</head>
+{% block main %}
+  <h1>Create Snippet</h1>
 
-<body>
-<h1>Create Snippet</h1>
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
 
-<form action="" method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-
-  <button type="submit">New</button>
-</form>
-</body>
-</html>
+    <button type="submit">New</button>
+  </form>
+{% endblock %}
