@@ -1,39 +1,50 @@
 # tests/test_account.py
 from django.contrib.auth import get_user_model
-from django.test import TestCase
+from django.test import TestCase, Client
+from django.urls import reverse
 
-from tests import factory
+from tests.factory import create_user
 
 
-class TestCustomUser(TestCase):
+class TestAccountSignUpView(TestCase):
     def setUp(self) -> None:
-        self.user = factory.create_user(
-            username="testuser",
-            email="testuser@example.com",
-            password="testpassword123",
+        self.url = reverse("accounts:signup")
+
+    def test_create_new_user(self):
+        credentials = {
+            "username": "test_user",
+            "email": "test@example.com",
+            "password1": "testpass123",
+            "password2": "testpass123",
+        }
+
+        response = self.client.post(self.url, credentials)
+
+        self.assertRedirects(response, reverse("accounts:login"))
+        user = get_user_model().objects.first()
+
+        self.assertEqual(user.username, "test_user")
+        self.assertEqual(user.email, "test@example.com")
+
+
+class TestAccountLogout(TestCase):
+    def setUp(self) -> None:
+        self.c = Client()
+        self.user = create_user(
+            username="test_user", email="test@example.com", password="test_password123"
         )
 
-    def test_guest_user(self):
-        user = get_user_model().objects.first()
-        self.assertEqual(user.username, "testuser")
-        self.assertEqual(user.email, "testuser@example.com")
-        self.assertTrue(user.is_active)
-        self.assertFalse(user.is_staff)
-        self.assertFalse(user.is_superuser)
+        credentials = {
+            "username": "test_user",
+            "email": "test@example.com",
+            "password": "test_password123",
+        }
 
+        self.c.login(**credentials)
 
-class TestCustomAdminUser(TestCase):
-    def setUp(self) -> None:
-        self.admin = factory.create_superuser(
-            username="testadmin",
-            email="testadmin@example.com",
-            password="adminpassword123",
-        )
+    def test_login(self):
+        self.assertTrue(self.user.is_authenticated)
 
-    def test_guest_user(self):
-        user = get_user_model().objects.first()
-        self.assertEqual(user.username, "testadmin")
-        self.assertEqual(user.email, "testadmin@example.com")
-        self.assertTrue(user.is_active)
-        self.assertTrue(user.is_staff)
-        self.assertTrue(user.is_superuser)
+    def test_logout(self):
+        response = self.c.post(reverse("accounts:logout"))
+        self.assertRedirects(response, reverse("accounts:login"))
