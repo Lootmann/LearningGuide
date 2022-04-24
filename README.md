@@ -83,6 +83,10 @@ There is a Royal Road to learning.
     - [x] [pytest](https://docs.pytest.org/)
     - [x] [pytest-cov](https://pytest-cov.readthedocs.io/en/latest/)
 
+  - server
+    - [WSGI](https://peps.python.org/pep-3333/)
+    - [ASGI](https://asgi.readthedocs.io/en/latest/introduction.html)
+
 - go
   - [GoDojo by Tenntenn](http://tenn.in/go)
   - [Go By Example](https://gobyexample.com/)
