@@ -2,6 +2,14 @@
 
 Learn Data Structures and Algorithms.
 
+
+## Links
+
+- [AtCoder](https://atcoder.jp/)
+- [Exercism](https://exercism.org/dashboard)
+- [Leetcode](https://leetcode.com/)
+
+
 ## Lists
 
 - [x] Array
