@@ -1,12 +1,16 @@
-FROM python:3.10-slim
-
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
-
-WORKDIR /code
+FROM python:3.10-slim as base
 
 COPY ./requirements.txt /code/
 
-RUN pip install -U pip && pip install -r ./requirements.txt
+RUN pip install -U pip && pip install -r /code/requirements.txt
+
+FROM python:3.10-slim as deployed
+
+COPY --from=base /usr/local/lib/python3.10/site-packages/ /usr/local/lib/python3.10/site-packages/
+
+WORKDIR /code
+
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
 COPY . /code/
