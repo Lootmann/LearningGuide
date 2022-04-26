@@ -11,13 +11,39 @@
   <div class="snippet-date">
     投稿日: {{ snippet.created_at|date:"DATETIME_FORMAT" }}
     {% if user.is_authenticated and snippet.create_by_id == user.id %}
-    <a href="{% url 'snippet_edit' snippet.id %}">編集</a>
+      <a href="{% url 'snippet_edit' snippet.id %}">編集</a>
     {% endif %}
   </div>
 
   <div class="source-code">
-    {{ snippet.code|pygmentize:"python3"}}
+    {{ snippet.code|pygmentize:"python3" }}
   </div>
 
   <p>{{ snippet.description }}</p>
+
+  {# comments #}
+  {% if comments %}
+    <div class="comment-lists">
+      <h2>Comment Lists</h2>
+
+
+      {% for comment in comments %}
+        <div class="comment">
+          <div>{{ comment.comment }}</div>
+          <small>by {{ comment.commented_by }} さん {{ comment.commented_at }}</small>
+        </div>
+      {% endfor %}
+
+
+      {% if user.is_authenticated %}
+        <form action="{% url 'comment_new' snippet.id %}" method="post" class="comment-form">
+          {% csrf_token %}
+          <label for="comment">Put Your Comment</label><br>
+          {{ comment_form.as_p }}
+          <button type="submit">Comment</button>
+        </form>
+      {% endif %}
+    </div>
+  {% endif %}
+
 {% endblock %}

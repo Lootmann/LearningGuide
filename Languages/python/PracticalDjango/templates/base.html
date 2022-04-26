@@ -14,11 +14,12 @@
 <body>
 <nav>
   <div class="container">
-    <a href="">Django Snippet</a>
+    <a href="{% url 'top' %}">Django Snippet</a>
 
     <ul>
       {% if user.is_authenticated %}
         <li><a href="{% url 'logout' %}">Logout</a></li>
+        <li><a href="{% url 'snippet_new' %}">snippet new</a></li>
       {% else %}
         <li><a href="{% url 'login' %}">LogIn</a></li>
         <li><a href="{% url 'signup' %}">SignUp</a></li>

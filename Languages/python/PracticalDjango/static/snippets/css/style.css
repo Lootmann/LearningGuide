@@ -6,3 +6,16 @@
   padding: 1rem;
   margin-bottom: 1rem;
 }
+
+.comment-lists {
+  margin: 10px 0;
+}
+
+.comment {
+  background-color: burlywood;
+  padding: 5px 10px;
+}
+
+.comment-form {
+  margin: 10px 0;
+}
