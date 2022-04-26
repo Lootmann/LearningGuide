@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #define FastIO cin.tie(nullptr), ios_base::sync_with_stdio(false);
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
 using namespace std;
 
 using Graph = vector<vector<int>>;
@@ -78,6 +79,17 @@ void bfs(const Graph &G, int start) {
   }
 }
 
+// Recursive Search
+void dfs_recursive(const Graph &G, int start, vector<bool> &seen) {
+  seen[start] = true;
+
+  // next vector
+  for (auto nv : G[start]) {
+    if (seen[nv]) continue;
+    dfs_recursive(G, nv, seen);
+  }
+}
+
 int main() {
   FastIO;
 
@@ -89,11 +101,8 @@ int main() {
     int from, to;
     cin >> from >> to;
 
-    // directed
-    G[from].emplace_back(to);
-
-    // undirected
-    // G[to].emplace_back(from);
+    G[from].emplace_back(to);  // directed
+    // G[to].emplace_back(from); // undirected
   }
 
   trace(G, n);
@@ -101,4 +110,13 @@ int main() {
   // start from 0
   bfs(G, 0);
   dfs(G, 0);
+
+  // Recursive DFS
+  title("dfs_recursive");
+
+  vector<bool> seen(n, false);
+  dfs_recursive(G, 0, seen);
+  for (size_t i = 0; i < seen.size(); ++i) {
+    cout << i << " " << seen[i] << '\n';
+  }
 }
