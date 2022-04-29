@@ -14,18 +14,13 @@ class Solution:
         return total
 
     def isHappy(self, n: int) -> bool:
-        used = {n}
+        used = set()
 
-        while True:
+        while n not in used:
+            used.add(n)
             n = self.sum_of_digit(n)
 
-            if n == 1:
-                return True
-
-            if n in used:
-                return False
-
-            used.add(n)
+        return 1 in used
 
 
 # @lc code=end
