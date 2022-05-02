@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="{% static 'base.css' %}" />
+    {% block extracss %}{% endblock extracss %}
+
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <ul>
+        <li><a href="{% url 'snippet:index' %}">Index</a></li>
+        <li><a href="{% url 'snippet:create' %}">Create</a></li>
+      </ul>
+    </header>
+
+    <div id="main">{% block main %} {% endblock %}</div>
+  </body>
+
+</html>

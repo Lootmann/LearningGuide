@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'snippets/detail.css' %}">
+{% endblock extracss %}
+
+{% block title %}
+snippet/detail.html
+{% endblock title %}
+
+{% block main %}
+<div class="container">
+  <h1>snippet/detail</h1>
+
+  <div class="title">
+    {{ snippet.title }}
+  </div>
+
+  <pre><code>{{ snippet.code }}</code></pre>
+</div>
+
+{% endblock main %}

@@ -1,0 +1,13 @@
+.title {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+pre {
+  background-color: burlywood;
+  padding: 5px 5px;
+}
+
+pre>code {
+  font-size: 20px;
+}

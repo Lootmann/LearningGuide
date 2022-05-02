@@ -1,0 +1,36 @@
+html {
+  background-color: dimgrey;
+}
+
+.container {
+  padding: 5px 10px;
+}
+
+.header {
+  background-color: darkgreen;
+  padding: 1px 0;
+}
+
+.header > ul {
+  display: flex; 
+  list-style: none;
+}
+
+.header > ul > li {
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.header > ul > li > a {
+  color: white;
+}
+
+/* table */
+.table,
+.table tr,
+.table th,
+.table td {
+  border: solid 1px black;
+  border-collapse: collapse;
+  padding: 10px 5px;
+}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+snippets/index.html
+{% endblock %}
+
+{% block main %}
+<div class="container">
+  <h1>snippets/index</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Code</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for snippet in snippets %}
+      <tr>
+        <td><a href="{{ snippet.get_absolute_url  }}">{{ snippet.id }}</a></td>
+        <td>{{ snippet.title }}</td>
+        <td>{{ snippet.short_code }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
