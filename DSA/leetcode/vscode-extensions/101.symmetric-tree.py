@@ -16,53 +16,20 @@ class TreeNode:
 
 # @lc code=start
 class Solution:
-    def left_inorder(self, root: Optional[TreeNode], node: List[int]) -> None:
-        if root:
-            node.append(root.val)
+    def compare_LR(self, L: Optional[TreeNode], R: Optional[TreeNode]) -> bool:
+        if not L and not R:
+            return True
 
-        if root.left:
-            self.left_inorder(root.left, node)
-        else:
-            node.append(None)
+        if L and R and L.val == R.val:
+            return self.compare_LR(L.left, R.right) and self.compare_LR(L.right, R.left)
 
-        if root.right:
-            self.left_inorder(root.right, node)
-        else:
-            node.append(None)
-
-    def right_inorder(self, root: Optional[TreeNode], node: List[int]) -> None:
-        if root:
-            node.append(root.val)
-
-        if root.right:
-            self.right_inorder(root.right, node)
-        else:
-            node.append(None)
-
-        if root.left:
-            self.right_inorder(root.left, node)
-        else:
-            node.append(None)
+        return False
 
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
         if not root:
-            return False
-
-        if root.left is None and root.right is None:
             return True
 
-        if root.left and not root.right:
-            return False
-
-        if not root.left and root.right:
-            return False
-
-        left_node, right_node = [], []
-
-        self.left_inorder(root.left, left_node)
-        self.right_inorder(root.right, right_node)
-
-        return left_node == right_node
+        return self.compare_LR(root.left, root.right)
 
 
 # @lc code=end
