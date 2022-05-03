@@ -3,6 +3,7 @@
 #
 # [160] Intersection of Two Linked Lists
 #
+from tkinter import W
 from typing import Optional
 
 
@@ -16,28 +17,30 @@ class ListNode:
 # @lc code=start
 class Solution:
     def getIntersectionNode(self, A: ListNode, B: ListNode) -> Optional[ListNode]:
-        """
-        complexity:
-            time: O(MlogN)
-            space: O(N)
-        """
-        # Memory O(N)
-        list = set()
+        tmpA, tmpB = A, B
+        lenA, lenB = 0, 0
 
-        # O(N)
-        while A:
-            list.add(A)
-            A = A.next
+        while tmpA:
+            lenA += 1
+            tmpA = tmpA.next
 
-        # O(M)
-        while B:
-            # O(logN)
-            if B in list:
-                return B
-            B = B.next
+        while tmpB:
+            lenB += 1
+            tmpB = tmpB.next
 
-        # O(MlogN) -> worse
-        return None
+        # list A longer than list B
+        if lenA > lenB:
+            for _ in range(lenA - lenB):
+                A = A.next
+        else:
+            for _ in range(lenB - lenA):
+                B = B.next
+
+        # list A and B are same length
+        while A != B:
+            A, B = A.next, B.next
+
+        return A
 
 
 # @lc code=end
