@@ -1,0 +1,2 @@
+run:
+	gunicorn config.wsgi
