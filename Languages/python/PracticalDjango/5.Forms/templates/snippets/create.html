@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  snippets/create.html
+{% endblock %}
+
+{% block main %}
+  <h1>snippets/create.html</h1>
+
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <input type="submit" value="Create">
+  </form>
+{% endblock %}

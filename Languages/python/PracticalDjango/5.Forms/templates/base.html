@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      html {
+        background-color: grey;
+      }
+    </style>
+
+    {% block extracss %} {% endblock %}
+
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+
+  <body>
+    <header>
+      <ul>
+        <li><a href="{% url 'snippets:index' %}">Snippets:Index</a></li>
+        <li><a href="{% url 'snippets:create' %}">Snippets:Create</a></li>
+      </ul>
+    </header>
+    <div id="main">{% block main %} {% endblock %}</div>
+  </body>
+</html>
