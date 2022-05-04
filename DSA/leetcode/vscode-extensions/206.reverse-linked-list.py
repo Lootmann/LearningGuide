@@ -16,21 +16,15 @@ class ListNode:
 # @lc code=start
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        if not head:
-            return head
+        # iterative
+        prev, cur = None, head
 
-        nodes = []
+        while cur:
+            nxt = cur.next
+            cur.next = prev
+            prev, cur = cur, nxt
 
-        while head:
-            nodes.append(head)
-            head = head.next
-
-        for i in range(len(nodes) - 1, 0, -1):
-            nodes[i].next = nodes[i - 1]
-
-        nodes[0].next = None
-
-        return nodes[-1]
+        return prev
 
 
 # @lc code=end
