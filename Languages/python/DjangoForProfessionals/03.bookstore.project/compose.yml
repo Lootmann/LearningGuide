@@ -2,7 +2,8 @@ services:
   web:
     build: .
     working_dir: /code
-    command: python manage.py runserver 0.0.0.0:8080
+    command: python3.10 -m gunicorn config.wsgi --bind 0.0.0.0:8080 --workers=3
+
     volumes:
       - type: bind
         source: .
