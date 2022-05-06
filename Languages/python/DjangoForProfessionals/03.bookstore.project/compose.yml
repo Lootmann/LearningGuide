@@ -1,0 +1,27 @@
+services:
+  web:
+    build: .
+    working_dir: /code
+    command: python manage.py runserver 0.0.0.0:8080
+    volumes:
+      - type: bind
+        source: .
+        target: /code
+    ports:
+      - published: 8080
+        target: 8080
+    depends_on:
+      db:
+        condition: service_started
+
+  db:
+    image: postgres:14
+    volumes:
+      - type: volume
+        source: bookstore_data
+        target: /var/lib/postgresql/data/
+    environment:
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
+
+volumes:
+  bookstore_data:

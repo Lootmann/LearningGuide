@@ -1,0 +1,5 @@
+venv/
+Makefile
+pyproject.toml
+requirements.txt
+__pycache__/
