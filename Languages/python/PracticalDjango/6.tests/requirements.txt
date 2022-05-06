@@ -1,0 +1,4 @@
+asgiref==3.5.1
+Django==4.0.4
+django-stub==0.1
+sqlparse==0.4.2
