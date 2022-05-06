@@ -13,9 +13,8 @@ class Solution:
         counter = collections.Counter(s)
 
         for i, ch in enumerate(s):
-            if ch in counter:
-                if counter[ch] == 1:
-                    return i
+            if counter[ch] == 1:
+                return i
 
         return -1
 
