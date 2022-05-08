@@ -8,69 +8,38 @@
 
 class Solution:
     def myAtoi(self, s: str) -> int:
+        MIN, MAX = -(2**31), 2**31 - 1
+
+        result = 0
+        sign = 1
+        seen = True
+
         for ch in s:
-            print(ch)
-
-        if len(s) == 0:
-            return 0
-
-        if len(s) == 1:
-            if s.isdigit():
-                return int(s)
-            return 0
-
-        is_minus = False
-        first_digit = False
-        sign = False
-
-        digits = []
-
-        for i, ch in enumerate(s):
-            print(i, ch)
-            if first_digit and (not ch.isdigit()):
-                break
-
-            if sign and not ch.isdigit():
-                return 0
-
-            elif ch == " ":
-                continue
-
-            elif ch == "+":
-                sign = True
-
-            elif ch == "-":
-                is_minus = True
-                sign = True
-
-            elif ch.isdigit():
-                first_digit = True
-                digits.append(ch)
-
-            elif not ch.isdigit():
-                if first_digit:
-                    break
-                else:
+            # first char is allowed '+', '-' or digit
+            if seen:
+                if ch == " ":
+                    continue
+                elif ch == "-":
+                    sign = -1
+                elif ch.isdigit():
+                    result = int(ch)
+                elif ch != "+":
                     return 0
+                seen = False
 
-        print("dig: ", digits)
-        concat = "".join(digits)
-        num = int(concat)
+            # 2nd, 3rd, ... chars is only allowed 0-9 digit
+            else:
+                if ch.isdigit():
+                    result = result * 10 + int(ch)
+                    if sign * result < MIN:
+                        return MIN
+                    if sign * result > MAX:
+                        return MAX
 
-        print("num: ", num)
+                else:
+                    break
 
-        if is_minus:
-            num *= -1
-
-        if num < -(2**31):
-            return -(2**31)
-
-        if num > 2**31:
-            return 2**31 - 1
-
-        print("ans: ", num)
-
-        return num
+        return sign * result
 
 
 # @lc code=end
