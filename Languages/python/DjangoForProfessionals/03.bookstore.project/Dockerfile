@@ -1,6 +1,6 @@
 FROM python:3.10-slim-buster as builder
 
-COPY ./docker.txt /code/
+COPY ./requirements/docker.txt /code/
 RUN pip install -U pip && pip install -r /code/docker.txt
 
 
