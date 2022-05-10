@@ -17,7 +17,7 @@ There is a Royal Road to learning.
   - The art of Readable Code
 
 - Database
-  - [ ] [OSS-DB Silver](https://github.com/Lootmann/LearningGuide/issues/59)
+  - [ ] [OSS-DB Silver](https://github.com/Lootmann/LearningGuide/issues/70)
   - [ ] [SQLZOO](https://sqlzoo.net/wiki/SQL_Tutorial)
   - [ ] [AI Shift - Exercise](https://www.ai-shift.co.jp/techblog/1980)
   - [x] [一週間で身につく MySQL](http://web.sevendays-study.com/mysql/)
@@ -36,8 +36,8 @@ There is a Royal Road to learning.
 
 - Network
   - [ ] [Mastering TCP/IP](https://github.com/Lootmann/LearningGuide/issues/31)
-  - [ ] [Web技術の基本 - HTTP, URI, HTML and REST](https://www.amazon.co.jp/dp/B06XNMMC9S/)
-  - [ ] [Webを支える技術](https://www.amazon.co.jp/dp/4774142042)
+  - [ ] Web技術の基本 - HTTP, URI, HTML and REST
+  - [ ] Webを支える技術
 
 - Security
   - [ ] [InfraEngineer](https://toumasblog.org/infra-engineer-basic/#toc2)
@@ -61,11 +61,11 @@ There is a Royal Road to learning.
 
 ## DSA
 
-- Data Structures and Algorithms
-  - [問題解決力を鍛える！アルゴリズムとデータ構造](https://github.com/Lootmann/LearningGuide/issues/32)
-  - [Leetcode](https://leetcode.com/problemset/all/) [- Issue](https://github.com/Lootmann/LearningGuide/issues/60)
+- [Data Structures and Algorithms](https://github.com/Lootmann/LearningGuide/issues/71)
+  - 問題解決力を鍛える！アルゴリズムとデータ構造
   - プログラミングコンテスト攻略のためのアルゴリズムとデータ構造
   - AtCoder
+  - Leetcode
 
 
 ## Languages
@@ -74,8 +74,8 @@ There is a Royal Road to learning.
   - [django](https://www.djangoproject.com/)
     - [実践 Django](https://github.com/Lootmann/LearningGuide/issues/58)
     - Django For Beginners
-    - Django for Professionals
-    - 自走プログラマー
+    - [Django for Professionals](https://github.com/Lootmann/LearningGuide/issues/66)
+    - [自走プログラマー](https://github.com/Lootmann/LearningGuide/issues/72)
 
   - test
     - [x] [doctest](https://docs.python.org/ja/3/library/doctest.html)
@@ -100,8 +100,7 @@ There is a Royal Road to learning.
 ## Misc
 
 - Encoding/Decoding
-  - [x] Base62
-  - [ ] Base64
+  - [x] Base62, Base64
 
 - Machine Learning
   - [ ] [How to become Machine Learning Engineer](https://qiita.com/KangsooKim/items/8d987a7089297068477b)
@@ -123,4 +122,4 @@ There is a Royal Road to learning.
 
 ## Next
 
-- [Cpp Ezoe](https://github.com/Lootmann/LearningGuide/issues/34)
+- Cpp Ezoe
