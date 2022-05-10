@@ -17,6 +17,8 @@ INSTALLED_APPS = [
     # custom app
     "accounts.apps.AccountsConfig",
     "pages.apps.PagesConfig",
+    # third party
+    "django_extensions",
 ]
 
 AUTH_USER_MODEL = "accounts.CustomUser"

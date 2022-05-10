@@ -20,3 +20,7 @@ logs:
 .PHONY: build
 build:
 	docker compose up -d --build
+
+.PHONY: show_urls
+show_urls:
+	docker compose exec web python3 manage.py show_urls
