@@ -10,16 +10,20 @@ from typing import List
 # @lc code=start
 class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        n1 = collections.Counter(nums1)
-        n2 = collections.Counter(nums2)
-        result = []
+        n1 = [0] * 1001
+        n2 = [0] * 1001
 
-        # O(N)
-        for k, v in n1.items():
-            if k in n2:
-                # O(N)
-                for _ in range(min(v, n2[k])):
-                    result.append(k)
+        for num1 in nums1:
+            n1[num1] += 1
+
+        for num2 in nums2:
+            n2[num2] += 1
+
+        result = list()
+
+        for i, (num1, num2) in enumerate(zip(n1, n2)):
+            if num1 > 0 and num2 > 0:
+                result += [i] * min(num1, num2)
 
         return result
 
