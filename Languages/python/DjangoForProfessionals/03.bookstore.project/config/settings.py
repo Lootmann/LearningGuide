@@ -19,7 +19,10 @@ INSTALLED_APPS = [
     "pages.apps.PagesConfig",
     # third party
     "django_extensions",
+    "crispy_forms",
 ]
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 AUTH_USER_MODEL = "accounts.CustomUser"
 
@@ -76,9 +79,17 @@ TIME_ZONE = "Asia/Tokyo"
 USE_I18N = True
 USE_TZ = True
 
-
-STATIC_URL = "static/"
+# the URL that we can use to reference static files.
+STATIC_URL = "/static/"
+# the URL defines the location of static files in 'local development'.
 STATICFILES_DIRS = [BASE_DIR / "static"]
+# the URL defines the location of static files for 'production'
+STATIC_ROOT = BASE_DIR / "staticfiles"
+# the option tells Django how to lok for static file directoriess.
+STATICFILES_FINDERS = [
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+]
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
