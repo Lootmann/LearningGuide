@@ -1,11 +1,16 @@
+# config/settings.py
 from pathlib import Path
+
+import environ
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = "django-insecure-yz4sk05az1i_92hhl8kp&_fvm5!0u758nwxdm+qw+hyj4)#nbm"
-DEBUG = True
-ALLOWED_HOSTS = ["*"]
+env = environ.Env()
+env.read_env(BASE_DIR / ".env")
 
+SECRET_KEY = env("SECRET_KEY")
+DEBUG = env("DEBUG")
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -42,7 +47,7 @@ ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 
 ACCOUNT_USERNAME_REQUIRED = False
-ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 
@@ -81,14 +86,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "config.wsgi.application"
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
-        "USER": "postgres",
-        "PASSWORD": "postgres",
-        "HOST": "db",
-        "PORT": 5432,
-    }
+    "default": env.db_url(),
 }
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -109,7 +107,7 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 # the URL defines the location of static files for 'production'
 STATIC_ROOT = BASE_DIR / "staticfiles"
-# the option tells Django how to lok for static file directoriess.
+# the option tells Django how to lok for static file directories.
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
