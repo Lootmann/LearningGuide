@@ -13,6 +13,10 @@ restart:
 test:
 	docker compose exec web python3 -m pytest -v
 
+.PHONY: verbose
+verbose:
+	docker compose exec web python3 -m pytest -vv --durations=0
+
 .PHONY: logs
 logs:
 	docker compose logs -ft
