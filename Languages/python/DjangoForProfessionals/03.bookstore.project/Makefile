@@ -5,9 +5,17 @@ run:
 down:
 	docker compose down
 
+.PHONY: build
+build:
+	docker compose up -d --build
+
 .PHONY: restart
 restart:
 	docker compose restart
+
+.PHONY: migrate
+migrate:
+	docker compose exec web python3 manage.py migrate
 
 .PHONY: test
 test:
@@ -20,10 +28,6 @@ verbose:
 .PHONY: logs
 logs:
 	docker compose logs -ft
-
-.PHONY: build
-build:
-	docker compose up -d --build
 
 .PHONY: show_urls
 show_urls:

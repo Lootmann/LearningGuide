@@ -114,3 +114,6 @@ STATICFILES_FINDERS = [
 ]
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# email
+DEFAULT_FROM_FIELD = "admin@djangobookstore.com"
