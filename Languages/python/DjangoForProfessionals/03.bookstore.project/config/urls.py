@@ -9,4 +9,6 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     # apps
     path("", include("pages.urls")),
+    # books
+    path("books/", include("books.urls")),
 ] + staticfiles_urlpatterns()

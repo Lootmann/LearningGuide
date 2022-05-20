@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     # custom app
     "accounts.apps.AccountsConfig",
     "pages.apps.PagesConfig",
+    "books.apps.BooksConfig",
     # third party
     "django_extensions",
     "crispy_forms",
