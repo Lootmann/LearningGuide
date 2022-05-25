@@ -1,4 +1,5 @@
-from django.test import SimpleTestCase, TestCase
+# tests/books/test_views.py
+from django.test import TestCase
 from django.urls import resolve, reverse
 
 from books.models import Book
@@ -32,3 +33,26 @@ class BookListViewTests(TestCase):
             view.func.__name__,
             BookListView.as_view().__name__,
         )
+
+    def test_book_list_view(self):
+        response = self.client.get(reverse("books:book_list"))
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "A super book")
+        self.assertContains(response, "me")
+        self.assertTemplateUsed(response, "books/book_list.html")
+
+
+class TestBookDetailView(TestCase):
+    def setUp(self) -> None:
+        self.book = Book.objects.create(
+            title="Harry Potter",
+            author="JK Rowling",
+            price="25.00",
+        )
+
+        self.response = self.client.get(self.book.get_absolute_url())
+
+    def test_book_detail_view(self):
+        self.assertEqual(self.response.status_code, 200)
+        self.assertContains(self.response, "Harry Potter")
+        self.assertTemplateUsed(self.response, "books/book_detail.html")
