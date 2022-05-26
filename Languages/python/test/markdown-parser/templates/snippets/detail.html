@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
+{% block extracss %}
+  <link rel="stylesheet" href="{% static 'snippets/detail.css' %}">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/atom-one-dark.min.css">
+{% endblock %}
+
 {% block title %}
   snippets/detail.html
 {% endblock %}
@@ -8,12 +17,21 @@
   <div class="container">
     <h1>snippets/detail</h1>
 
-    <div class="title">
-      {{ snippet.id }} | {{ snippet.title }}
-    </div>
+    <div id="snippet-detail">
+      <header class="header mb-1">
+        <div class="">id: {{ snippet.id }}</div>
+        <div class="">Title: {{ snippet.title }}</div>
+      </header>
 
-    <div class="code">
-      {{ snippet.code }}
+      <div id="code-2-md">
+        {{ snippet.code_2_md | safe }}
+      </div>
     </div>
   </div>
+{% endblock %}
+
+
+{% block extrajs %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 {% endblock %}
