@@ -1,6 +1,10 @@
-# snippets/models.py
+"""snippets/models.py
+
+test projects for Markdown Snippets with fenced code
+"""
 import uuid
 
+import mistletoe
 from django.db import models
 
 
@@ -27,6 +31,10 @@ class SnippetModel(models.Model):
 
     def code_heading(self) -> str:
         return self.code.split("\n")[0][:40]
+
+    def code_2_md(self) -> str:
+        rendered = mistletoe.markdown(self.code)
+        return rendered
 
     def __str__(self) -> str:
         return self.title

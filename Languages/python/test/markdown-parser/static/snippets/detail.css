@@ -1,0 +1,19 @@
+#snippet-detail {
+}
+
+#snippet-detail > header.header {
+  background-color: silver;
+  padding: 5px 8px;
+  border-radius: 10px;
+}
+
+#code-2-md {
+  background-color: silver;
+  padding: 5px 8px;
+  border-radius: 10px;
+}
+
+
+#code-2-md > pre > code {
+  border-radius: 10px;
+}
