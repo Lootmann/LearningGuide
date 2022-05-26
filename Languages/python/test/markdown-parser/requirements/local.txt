@@ -5,6 +5,7 @@ Django==4.0.4
 django-environ==0.8.1
 django-stub==0.1
 iniconfig==1.1.1
+mistletoe==0.8.2
 packaging==21.3
 pluggy==1.0.0
 py==1.11.0
