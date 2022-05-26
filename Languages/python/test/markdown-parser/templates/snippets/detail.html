@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  snippets/detail.html
+{% endblock %}
+
+{% block main %}
+  <div class="container">
+    <h1>snippets/detail</h1>
+
+    <div class="title">
+      {{ snippet.id }} | {{ snippet.title }}
+    </div>
+
+    <div class="code">
+      {{ snippet.code }}
+    </div>
+  </div>
+{% endblock %}

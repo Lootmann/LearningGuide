@@ -1,0 +1,33 @@
+html {
+  font-size: 18px;
+  background-color: grey;
+}
+
+#header {
+  font-size: 20px;
+}
+
+#header ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+#header ul li {
+  display: inline-block;
+  background-color: burlywood;
+  padding: 5px 10px;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.table,
+.table tr,
+.table td,
+.table th {
+  padding: 4px 10px;
+  border: 1px solid black;
+}
+
