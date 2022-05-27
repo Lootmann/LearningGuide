@@ -13,12 +13,15 @@ class Solution:
         horizontal, vertical, diagonal
         """
         cnt = 0
+        row_limit = len(board)
+        col_limit = len(board[0])
+
         dx = [-1, -1, -1, 0, 0, 1, 1, 1]
         dy = [-1, 0, 1, -1, 1, -1, 0, 1]
 
         for x, y in zip(dx, dy):
-            if 0 <= row + y < len(board) and 0 <= column + x < len(board[0]):
-                if board[row + y][column + x] == 1:
+            if 0 <= row + y < row_limit and 0 <= column + x < col_limit:
+                if board[row + y][column + x] & 1:
                     cnt += 1
 
         return cnt
@@ -27,31 +30,28 @@ class Solution:
         """
         Do not return anything, modify board in-place instead.
         """
-        next_gen = [[0] * len(board[0]) for _ in range(len(board))]
+        row_length = len(board)
+        col_length = len(board[0])
 
-        for r, row in enumerate(board):
-            for c, cell in enumerate(row):
+        for r in range(row_length):
+            for c in range(col_length):
                 # current state
-                current_state = cell
+                current_state = board[r][c]
 
                 # check neighbor counts
                 neighbor_count = self.count_neighbor(board, r, c)
 
                 if current_state == 1:
-                    if neighbor_count < 2:
-                        next_gen[r][c] = 0
                     if neighbor_count in (2, 3):
-                        next_gen[r][c] = 1
-                    if neighbor_count > 3:
-                        next_gen[r][c] = 0
+                        board[r][c] |= 2
 
                 if current_state == 0:
                     if neighbor_count == 3:
-                        next_gen[r][c] = 1
+                        board[r][c] |= 2
 
-        for i, row in enumerate(board):
-            for j, _ in enumerate(row):
-                board[i][j] = next_gen[i][j]
+        for i in range(row_length):
+            for j in range(col_length):
+                board[i][j] >>= 1
 
         return
 
