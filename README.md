@@ -6,10 +6,7 @@ There is a Royal Road to learning.
 
 ## AWS
 
-- Books
-  - AWS Web Services 業務システム設計・移行ガイド
-  - AWS Lambda 実践ガイド
-
+Move to another repo.
 
 ## Computer Science
 
