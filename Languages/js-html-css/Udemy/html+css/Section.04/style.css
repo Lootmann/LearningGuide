@@ -12,20 +12,35 @@ html {
   /* FLEXBOX */
   display: flex;
 
+  flex-direction: row;
+
   /* vertically align */
   align-items: center;
 
   /* horizontally align */
-  /* center, space-between, space-around */
-  justify-content: space-between;
+
+  /* 
+   * flex-start, flex-end
+   * center, space-between, space-around
+   */
+  /* justify-content: space-between; */
+
+  /* gap */
+  gap: 10px;
+}
+
+.el {
+  /* margin-right: 30px; */
 }
 
 .el--1 {
   background-color: blueviolet;
+  align-self: flex-start;
 }
 
 .el--2 {
   background-color: orangered;
+  align-self: flex-end;
 }
 
 .el--3 {
@@ -35,6 +50,7 @@ html {
 
 .el--4 {
   background-color: goldenrod;
+  align-self: stretch
 }
 
 .el--5 {
@@ -43,6 +59,7 @@ html {
 
 .el--6 {
   background-color: steelblue;
+  order: -1;
 }
 
 .el--7 {
