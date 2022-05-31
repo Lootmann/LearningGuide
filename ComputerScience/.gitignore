@@ -2,3 +2,4 @@
 *.sqlite3
 *.py[co]
 .env
+venv/
