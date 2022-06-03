@@ -1,5 +1,3 @@
-import pytest
-
 from src.cli import CLI
 
 test_strings = {
@@ -57,11 +55,20 @@ class TestEnclose:
     def setup_method(self):
         self.cli = CLI()
 
-    def test_short(self):
+    def test_hello(self):
         got = self.cli.enclose(["hello"])
         want = ""
         want += " -------------------------------------------------------------------------------\n"
         want += "| hello                                                                         |\n"
+        want += " -------------------------------------------------------------------------------"
+
+        assert got == want
+
+    def test_short(self):
+        got = self.cli.enclose([test_strings["short"]])
+        want = ""
+        want += " -------------------------------------------------------------------------------\n"
+        want += "| Why hello friends :^) How are you doin?                                       |\n"
         want += " -------------------------------------------------------------------------------"
 
         assert got == want
