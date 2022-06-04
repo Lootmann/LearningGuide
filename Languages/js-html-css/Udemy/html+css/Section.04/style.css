@@ -30,10 +30,27 @@ html {
 }
 
 .el {
-  /* margin-right: 30px; */
+  /* default properties
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto; */
+
+  /* LIKE min-length */
+  /* flex-basis: 200px; */
+  /* flex-shrink: 0; */
+
+  /*
+    flex-property shorthand
+    grow shrink basiks
+  */
+  flex: 1 0 100px;
+
+  /* all elements are same size */
+  /* flex-grow: 1; */
 }
 
 .el--1 {
+  /* flex-grow: 1; */
   background-color: blueviolet;
   align-self: flex-start;
 }
