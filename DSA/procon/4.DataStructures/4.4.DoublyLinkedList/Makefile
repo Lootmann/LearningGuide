@@ -5,7 +5,7 @@ run:
 in:
 	python3.10 main.py < 1
 	python3.10 main.py < 2
-	python3.10 main.py < 3
+#	python3.10 main.py < 3
 
 .PHONY: test
 test:
