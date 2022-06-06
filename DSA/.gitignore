@@ -229,3 +229,8 @@ go.work
 /Godeps/
 
 # End of https://www.toptal.com/developers/gitignore/api/go
+
+### Go ###
+test/
+# End
+
