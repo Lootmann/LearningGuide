@@ -1,0 +1,26 @@
+services:
+  note:
+    build: .
+    container_name: docker_jupyterlab
+    restart: always
+    tty: true
+    entrypoint: >
+      jupyter-lab
+      --allow-root
+      --ip=0.0.0.0
+      --port=8080
+      --no-browser
+      --NotebookApp.token=''
+      --notebook-dir=/workspace
+
+    volumes:
+      - type: bind
+        source: ./workspace
+        target: /workspace
+
+      - type: bind
+        source: ./config
+        target: /root/.config/matplotlibrc
+
+    ports:
+      - 8080:8080
