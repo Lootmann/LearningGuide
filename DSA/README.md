@@ -14,36 +14,30 @@ Learn Data Structures and Algorithms.
 ## Lists
 
 - [x] Array
-
   - [x] Array Stack
   - [x] Array Queue
   - [ ] Array Deque
   - [x] Min Stack
 
 - [x] Singly Linked List
-
   - [x] SLL Stack
   - [x] SLL Queue
 
 - [x] Doubly Linked List
-
   - [x] DLL Stack
   - [x] DLL Queue
   - [x] DLL Deque
 
-- [ ] Hash
-
-  - [ ] Open Address
-  - [ ] Chain Hash
+- [x] Hash
+  - [x] Open Address
+  - [x] Chain Hash
 
 - [ ] Heap
-
   - [ ] Binary Heap
 
 - [ ] String
 
 - [ ] Tree
-
   - [ ] Rooted Tree
   - [ ] Binary Search Tree
   - [ ] Depth-First Search
@@ -55,7 +49,6 @@ Learn Data Structures and Algorithms.
   - [ ] RedBlack Tree
 
 - [ ] Graph
-
   - [ ] Weighted Directed Tree
   - [ ] Minimum Spanning Tree
   - [ ] Dijkstra
