@@ -1,4 +1,9 @@
-echo "*** findMax"
+proc title(msg: string) =
+  echo "\n********************"
+  echo "* ", msg
+  echo "********************"
+
+title("findMax")
 proc findMax(x: int, y: int): int =
   if x > y:
     return x
@@ -11,8 +16,8 @@ const
 echo findMax(x, y)
 
 
-# arg: var int means arg changeable value
-proc changeArgument(arg: var int) = 
+title("arg: var in maens arg changeable value")
+proc changeArgument(arg: var int) =
   arg += 10
 
 var n: int = 10
@@ -21,7 +26,7 @@ changeArgument(n)
 echo "n = ", n
 
 
-echo "\n*** Uniform Call Syntax"
+title("Uniform Call Syntax")
 proc plus(x, y: int): int =
   return x + y
 
@@ -33,11 +38,11 @@ let
   b = 3
   c = 4
 
-echo a.plus(b) == plus(a ,b)
+echo a.plus(b) == plus(a, b)
 echo b.multi(c) == multi(b, c)
 
 
-echo "\n*** Result Variable"
+title("Result Variable")
 proc findBiggest(a: seq[int]): int =
   # 'result' variable if return int, result:int = 0 by default
   # but, if 'container a' has some minus integer, result will return wrong :^)
@@ -49,8 +54,8 @@ let d = @[6, 10, 1, 12, 15, 8]
 echo findBiggest(d)
 
 
-echo "\n*** keepOdds"
-proc keepOdds(b: seq[int]): seq[int] = 
+title("keepOdds")
+proc keepOdds(b: seq[int]): seq[int] =
   for number in b:
     if number mod 2 == 1:
       result.add(number)
@@ -58,3 +63,30 @@ proc keepOdds(b: seq[int]): seq[int] =
 let f = @[1, 6, 4, 43, 57, 34, 98]
 echo keepOdds(f)
 
+
+title("isDivisibleBy3")
+proc isDivisibleBy3(x: int): bool =
+  return x mod 3 == 0
+
+proc filterMultiplesOf3(a: seq[int]): seq[int] =
+  for i in a:
+    if i.isDivisibleBy3():
+      result.add(i)
+
+let
+  g = @[2, 6, 5, 7, 9, 0, 5, 3]
+  h = @[5, 4, 3, 2, 1]
+  i = @[626, 45390, 3219, 4210, 4126]
+
+echo filterMultiplesOf3(g)
+echo h.filterMultiplesOf3()
+echo filterMultiplesOf3 i
+
+
+proc minus(x, y: int): int
+
+echo minus(10, 12)
+echo minus(10, 1)
+
+proc minus(x, y: int): int =
+  return x - y
