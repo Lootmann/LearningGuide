@@ -59,10 +59,11 @@ Move to another repo.
 ## DSA
 
 - [Data Structures and Algorithms](https://github.com/Lootmann/LearningGuide/issues/71)
-  - 問題解決力を鍛える！アルゴリズムとデータ構造
-  - プログラミングコンテスト攻略のためのアルゴリズムとデータ構造
   - AtCoder
+  - EnlightenSolving
+  - Exercism
   - Leetcode
+  - procon
 
 
 ## Languages
@@ -98,11 +99,18 @@ Move to another repo.
   - [Nim Official Tutorial](https://nim-lang.org/documentation.html)
   - [Nim Road Map - qiita](https://qiita.com/momeemt/items/25bc509aadcc5c5ff92b#nim-%E5%AD%A6%E7%BF%92%E3%83%AD%E3%83%BC%E3%83%89%E3%83%9E%E3%83%83%E3%83%97)
 
+- [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
+  - BlockChain
+    - [Learn Blockchain by Buiding One](https://hackernoon.com/learn-blockchains-by-building-one-117428612f46)
+  - CLI
+    - [cowsay](https://flaviocopes.com/go-tutorial-cowsay/)
+
 
 ## Misc
 
 - Encoding/Decoding
   - [x] Base62, Base64
+  - [ ] Run Length Encoding
 
 - Machine Learning
   - [ ] [How to become Machine Learning Engineer](https://qiita.com/KangsooKim/items/8d987a7089297068477b)
