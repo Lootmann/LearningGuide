@@ -6,3 +6,4 @@ README.md
 
 # nim ignores
 *.out
+nim/*/Makefile
