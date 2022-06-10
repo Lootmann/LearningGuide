@@ -3,3 +3,6 @@ HELP.md
 HINTS.md
 README.md
 .exercism/
+
+# nim ignores
+*.out
