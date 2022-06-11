@@ -6,5 +6,5 @@
 
 - Tutorial
   - [x] [Nim basics](https://narimiran.github.io/nim-basics/) done at 2022-06-10
-  - [ ] [Nim Tutorial Part I](https://nim-lang.org/docs/tut1.html)
+  - [x] [Nim Tutorial Part I](https://nim-lang.org/docs/tut1.html) done at 2022-06-11
   - [ ] [Nim by Example](https://nim-by-example.github.io/)
