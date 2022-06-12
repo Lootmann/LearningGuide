@@ -75,6 +75,9 @@ Move to another repo.
     - [Django for Professionals](https://github.com/Lootmann/LearningGuide/issues/66)
     - [自走プログラマー](https://github.com/Lootmann/LearningGuide/issues/72)
 
+  - [FastAPI](https://fastapi.tiangolo.com/)
+    - [FastAPI Tutorial](https://fastapi.tiangolo.com/tutorial/)
+
   - test
     - [x] [doctest](https://docs.python.org/ja/3/library/doctest.html)
     - [x] [unittest](https://docs.python.org/ja/3/library/unittest.html)
@@ -129,6 +132,16 @@ Move to another repo.
   - [docker-compose spec](https://github.com/compose-spec/compose-spec/blob/master/spec.md)
   - [docker-compose v2](https://zenn.dev/miroha/articles/whats-docker-compose-v2)
 
+
+## Xeal
+
+- [Zenn Python Web Application](https://zenn.dev/bigen1925/books/introduction-to-web-application-with-python)
+- [Zenn Only Python Application](https://zenn.dev/alivelimb/books/python-web-frontend)
+- [Zenn FastAPI Tutorial](https://zenn.dev/sh0nk/books/537bb028709ab9)
+- [Qiita FastAPI Tutorial](https://qiita.com/bee2/items/75d9c0d7ba20e7a4a0e9)
+- [Python PEP3333](https://peps.python.org/pep-3333/)
+- [Python How to create Web Framework](https://c-bata.link/webframework-in-python/)
+- [MDN docs What is HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
 
 ## Next
 
