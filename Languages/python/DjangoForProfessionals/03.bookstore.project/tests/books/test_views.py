@@ -1,8 +1,9 @@
 # tests/books/test_views.py
+from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import resolve, reverse
 
-from books.models import Book
+from books.models import Book, Review
 from books.views import BookListView
 
 
@@ -44,10 +45,22 @@ class BookListViewTests(TestCase):
 
 class TestBookDetailView(TestCase):
     def setUp(self) -> None:
+        self.user = get_user_model().objects.create_user(
+            username="reviewuser",
+            email="review@exmaple.com",
+            password="testpass123",
+        )
+
         self.book = Book.objects.create(
             title="Harry Potter",
             author="JK Rowling",
             price="25.00",
+        )
+
+        self.review = Review.objects.create(
+            book=self.book,
+            author=self.user,
+            review="An excellent review",
         )
 
         self.response = self.client.get(self.book.get_absolute_url())
@@ -55,4 +68,9 @@ class TestBookDetailView(TestCase):
     def test_book_detail_view(self):
         self.assertEqual(self.response.status_code, 200)
         self.assertContains(self.response, "Harry Potter")
+        self.assertTemplateUsed(self.response, "books/book_detail.html")
+
+    def test_book_detail_view_has_reviews(self):
+        self.assertContains(self.response, "An excellent review")
+        self.assertContains(self.response, "reviewuser")
         self.assertTemplateUsed(self.response, "books/book_detail.html")
