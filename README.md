@@ -14,9 +14,9 @@ Move to another repo.
   - The art of Readable Code
 
 - Database
+  - [ ] [AI Shift - Exercise](https://www.ai-shift.co.jp/techblog/1980)
   - [ ] [OSS-DB Silver](https://github.com/Lootmann/LearningGuide/issues/70)
   - [ ] [SQLZOO](https://sqlzoo.net/wiki/SQL_Tutorial)
-  - [ ] [AI Shift - Exercise](https://www.ai-shift.co.jp/techblog/1980)
   - [x] [一週間で身につく MySQL](http://web.sevendays-study.com/mysql/)
   - [x] [SQL 攻略](http://sql.main.jp/)
 
@@ -113,7 +113,7 @@ Move to another repo.
 
 - Encoding/Decoding
   - [x] Base62, Base64
-  - [ ] Run Length Encoding
+  - [x] Run Length Encoding
 
 - Machine Learning
   - [ ] [How to become Machine Learning Engineer](https://qiita.com/KangsooKim/items/8d987a7089297068477b)
