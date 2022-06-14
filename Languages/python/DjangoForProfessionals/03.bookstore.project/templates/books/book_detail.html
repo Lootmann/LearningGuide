@@ -1,9 +1,14 @@
+{# templates/books/book_detail.html #}
 {% extends '_base.html' %}
 
 {% block title %}{{ book.title }}{% endblock title %}
 
 {% block main %}
   <div class="book-detail">
+    {% if book.cover %}
+      <img class="bookcover" src="{{ book.cover.url }}" alt="{{ book.title }}">
+    {% endif %}
+
     <h2><a href="">{{ book.title }}</a></h2>
     <p>Author: {{ book.author }}</p>
     <p>Price: {{ book.price }}</p>
@@ -13,7 +18,7 @@
 
       <ul>
         {% for review in book.reviews.all %}
-          <li>{{ review.review }} {{ review.author }}</li>
+          <li>{{ review.review }} by {{ review.author }}</li>
         {% endfor %}
       </ul>
     </div>

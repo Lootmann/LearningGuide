@@ -114,6 +114,11 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
 
+# the absolute file system path to the directory for user-uploaded files
+MEDIA_URL = "/media/"
+# the URL we can use in our templates for the files
+MEDIA_ROOT = BASE_DIR / "media"
+
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # email
