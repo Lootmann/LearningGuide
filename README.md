@@ -4,44 +4,19 @@ My Learning Guide.
 There is a Royal Road to learning.
 
 
-## AWS
-
-Move to another repo.
-
 ## Computer Science
-
-- Coding
-  - The art of Readable Code
 
 - Database
   - [ ] [AI Shift - Exercise](https://www.ai-shift.co.jp/techblog/1980)
-  - [ ] [OSS-DB Silver](https://github.com/Lootmann/LearningGuide/issues/70)
-  - [ ] [SQLZOO](https://sqlzoo.net/wiki/SQL_Tutorial)
   - [x] [一週間で身につく MySQL](http://web.sevendays-study.com/mysql/)
   - [x] [SQL 攻略](http://sql.main.jp/)
 
 - Git
-  - [Git Official ?](https://git-scm.com)
-  - [Write yourself a Git!](https://wyag.thb.lt/)
   - [x] [.git の中身を見てみよう](https://qiita.com/tatane616/items/dbad66179754be57d2e2)
   - [x] [GitHub 演習](https://github.com/kaityo256/github)
 
-- Hardware
-  - コンピュータシステムの理論と実装 - モダンなコンピュータの作り方
-  - コンピュータはなぜ動くのか ～知っておきたいハードウエア＆ソフトウエアの基礎知識～
-  - コンピュータの構成と設計 MIPS Edition
-
 - Network
   - [x] [Mastering TCP/IP](https://github.com/Lootmann/LearningGuide/issues/31)
-  - [ ] Web技術の基本 - HTTP, URI, HTML and REST
-  - [ ] Webを支える技術
-
-- Security
-  - [ ] [InfraEngineer](https://toumasblog.org/infra-engineer-basic/#toc2)
-  - [ ] [WebApp](https://speakerdeck.com/cybozuinsideout/web-application-overview-2021)
-  - [ ] [Security 101 - Cybouz](https://speakerdeck.com/cybozuinsideout/security-2021)
-  - [ ] [X.509](https://qiita.com/TakahikoKawasaki/items/4c35ac38c52978805c69)
-  - [ ] [Web Application](https://speakerdeck.com/cybozuinsideout/web-application-overview-2021)
 
 - Server
   - Nginx
@@ -49,11 +24,6 @@ Move to another repo.
     - [Nginx.com](https://www.nginx.com/)
     - [Nginx.org](https://nginx.org/en/docs)
     - [Nginx Docker](https://hub.docker.com/_/nginx)
-
-- System
-  - [System Design Primer](https://github.com/donnemartin/system-design-primer)
-  - [Distributed Systems](https://www.distributed-systems.net/index.php/books/ds3/)
-  - データ指向アプリケーションデザイン
 
 
 ## DSA
@@ -70,10 +40,7 @@ Move to another repo.
 
 - python
   - [django](https://www.djangoproject.com/)
-    - [実践 Django](https://github.com/Lootmann/LearningGuide/issues/58)
-    - Django For Beginners
     - [Django for Professionals](https://github.com/Lootmann/LearningGuide/issues/66)
-    - [自走プログラマー](https://github.com/Lootmann/LearningGuide/issues/72)
 
   - [FastAPI](https://fastapi.tiangolo.com/)
     - [FastAPI Tutorial](https://fastapi.tiangolo.com/tutorial/)
@@ -115,9 +82,6 @@ Move to another repo.
   - [x] Base62, Base64
   - [x] Run Length Encoding
 
-- Machine Learning
-  - [ ] [How to become Machine Learning Engineer](https://qiita.com/KangsooKim/items/8d987a7089297068477b)
-
 
 ## Tools
 
@@ -142,7 +106,26 @@ Move to another repo.
 - [Python PEP3333](https://peps.python.org/pep-3333/)
 - [Python How to create Web Framework](https://c-bata.link/webframework-in-python/)
 - [MDN docs What is HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
-
-## Next
-
+- [OSS-DB Silver](https://github.com/Lootmann/LearningGuide/issues/70)
+- [SQLZOO](https://sqlzoo.net/wiki/SQL_Tutorial)
+- [Git Official ?](https://git-scm.com)
+- [Write yourself a Git!](https://wyag.thb.lt/)
+- [How to become Machine Learning Engineer](https://qiita.com/KangsooKim/items/8d987a7089297068477b)
+- [Distributed Systems](https://www.distributed-systems.net/index.php/books/ds3/)
+- [Designing Data-Intensive Applications]
+- Web技術の基本 - HTTP, URI, HTML and REST
+- Webを支える技術
+- [InfraEngineer](https://toumasblog.org/infra-engineer-basic/#toc2)
+- [WebApp](https://speakerdeck.com/cybozuinsideout/web-application-overview-2021)
+- [Security 101 - Cybouz](https://speakerdeck.com/cybozuinsideout/security-2021)
+- [X.509](https://qiita.com/TakahikoKawasaki/items/4c35ac38c52978805c69)
+- [Web Application](https://speakerdeck.com/cybozuinsideout/web-application-overview-2021)
+- [System Design Primer](https://github.com/donnemartin/system-design-primer)
+- The Art of Readable Code
+- 実践 Django
+- 自走プログラマー
+- Django For Beginners
 - Cpp Ezoe
+- コンピュータシステムの理論と実装 - モダンなコンピュータの作り方
+- コンピュータはなぜ動くのか ～知っておきたいハードウエア＆ソフトウエアの基礎知識～
+- コンピュータの構成と設計 MIPS Edition
