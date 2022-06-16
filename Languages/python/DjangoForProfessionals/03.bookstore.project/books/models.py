@@ -19,6 +19,11 @@ class Book(models.Model):
     # when you want to handle to regular file, change ImageField to FileField
     cover = models.ImageField(upload_to="covers/", blank=True)
 
+    class Meta:
+        permissions = [
+            ("special_status", "Can read all books"),
+        ]
+
     def __str__(self) -> str:
         return str(self.title)
 
