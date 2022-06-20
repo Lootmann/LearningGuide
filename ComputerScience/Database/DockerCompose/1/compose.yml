@@ -19,7 +19,5 @@ services:
     environment:
       - POSTGRES_PASSWORD=postgres
 
-    tty: true
-
 volumes:
   sql-test:

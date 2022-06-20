@@ -8,7 +8,7 @@ build:
 	docker compose build
 
 buildup:
-	docker compose up --build
+	docker compose up --build -d
 
 login:
 	docker compose exec db bash
