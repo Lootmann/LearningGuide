@@ -1,0 +1,23 @@
+services:
+  db:
+    build: .
+    container_name: ai-shift-db
+
+    ports:
+      - published: 5432 # container port
+        target: 5432    # published port via access from outer docker engine
+
+    volumes:
+      - type: volume
+        source: ai-shift-db-training
+        target: /var/lib/postgresql/data
+
+      - type: bind
+        source: ./init.sql
+        target: /docker-entrypoint-initdb.d/init.sql
+
+    environment:
+      - POSTGRES_PASSWORD=postgres
+
+volumes:
+  ai-shift-db-training:
