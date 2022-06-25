@@ -78,3 +78,104 @@ app ---> [Node A] ----------> [DB]
         \
          ---> ...
 ```
+
+
+# ER Model
+
+## DB Normalization
+
+Relation から データの冗長性を排除すること
+
+```
+NFNF: 非正規形
+BCNF: ボイスコッド正規形
+
+NFNF -> 1NF -> 2NF -> 3NF -> BCNF -> 4NF -> 5NF
+```
+
+**Normal Form: 正規形**
+正規化とは リレーションからデータの冗長性を排除していく一連のプロレス
+
+**1NF**
+全ての属性が Atomicであること
+
+
+### テーブルの分解
+
+```
+| 学籍番号 | 氏名 | 部活ID | 登録日 |
+
+学籍番号 -> 氏名
+{学籍番号, 部活ID} -> 登録日 # 部分関数従属性
+```
+
+```
+# 分解
+
+# Table 1
+学籍番号 -> 氏名
+
+# Table 2
+{学籍番号, 部活ID} -> 登録日
+```
+
+
+**2NF**
+1NF かつ 全ての非キー属性がキーに完全関数従属していること
+
+`X -> Y`: Xの値が決まれば Yの値が1つに定まる
+`{A, B} -> C`: Cの値は AとBの値の組み合わせで1つに定まる
+
+
+**3NF**
+2NF かつ 全ての非キー属性が キーに推移関数従属していないこと
+
+```
+| id | name | lab_id | lab_name |
+
+
+# lab_id -> lab_name: 推移関数従属
+
+| id | name | lab_id |
+| lab_id | lab_name |
+```
+
+
+**BCNF**
+3NF かつ 関数従属性が すべて取り除かれた状態
+
+```
+| id | department | lab_name |
+
+# 分解
+
+| id         | department |
+| department | lab_name   |
+```
+
+適当な分解をすると `情報の欠落` が発生してしまうこと
+
+| id | department | lab_name |
+| -- | ---------- | -------- |
+| s1 | DB         | RDB      |
+| s1 | Lang       | go-lang  |
+| s2 | DB         | NoSQL    |
+
+| id | department |
+| -- | ---------- |
+| s1 | DB         |
+| s1 | Lang       |
+| s2 | DB         |
+
+| department | lab_name |
+| ---------- | -------- |
+| DB         | RDB      |
+| Lang       | go-lang  |
+| DB         | NoSQL    |
+
+
+id -> lab_name: の情報が欠落してるので
+s1 -> DB, DB -> {RDB, NoSQL} と、一意に特定ができない
+
+いつの間にか何かの情報が欠落している
+
