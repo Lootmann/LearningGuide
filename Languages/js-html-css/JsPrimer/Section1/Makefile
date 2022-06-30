@@ -1,5 +1,6 @@
+FILENAME = ./string.js
 run:
-	node ./array.js
+	node ${FILENAME}
 
 watch:
-	find ./ | entr -c node ./for.js
+	find ./ | entr -c node ${FILENAME}
