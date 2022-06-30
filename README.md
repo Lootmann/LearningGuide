@@ -64,6 +64,7 @@ There is a Royal Road to learning.
   - [Jonas HTML+CSS](https://github.com/Lootmann/LearningGuide/issues/37)
   - [Jonas JavaScript](https://github.com/Lootmann/LearningGuide/issues/36)
   - [TypeScript](https://typescriptbook.jp/)
+  - [JsPrimer](https://jsprimer.net/)
 
 - nim
   - [Nim Official Reference](https://nim-lang.org/)
