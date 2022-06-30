@@ -1,2 +1,5 @@
 run:
-	node ./prototype.js
+	node ./array.js
+
+watch:
+	find ./ | entr -c node ./array.js
