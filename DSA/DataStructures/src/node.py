@@ -45,6 +45,10 @@ class TreeNode:
     def val(self):
         return self._val
 
+    @val.setter
+    def val(self, _val):
+        self._val = _val
+
     @property
     def left(self) -> Optional["TreeNode"]:
         return self._left
