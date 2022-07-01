@@ -8,5 +8,4 @@ class TestSinglyLinkedList:
 
     def test_init(self):
         assert self.node.val == 10
-        assert self.node.size == 0
         assert self.node.next is None
