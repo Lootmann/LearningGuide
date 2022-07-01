@@ -84,6 +84,41 @@ class Tree:
 
         return False
 
+    def delete(self, val) -> None:
+        self._root = self._delete(self._root, val)
+        if self._root:
+            self._size -= 1
+
+    def _delete(self, node: Optional["TreeNode"], val) -> Optional["TreeNode"]:
+        if not node:
+            return None
+
+        if node.val == val:
+            if not node.right:
+                return node.left
+
+            if not node.left:
+                return node.right
+
+            if node.left and node.right:
+                node.val = Tree.get_successor(node)
+                node.right = self._delete(node.right, node.val)
+
+        elif val < node.val:
+            node.left = self._delete(node.left, val)
+
+        else:
+            node.right = self._delete(node.right, val)
+
+        return node
+
+    @classmethod
+    def get_successor(cls, node: Optional["TreeNode"]) -> Optional["TreeNode"]:
+        node = node.right
+        while node.left:
+            node = node.left
+        return node.val
+
     def inorder(self) -> list:
         res = []
         self._inorder(self._root, res)
