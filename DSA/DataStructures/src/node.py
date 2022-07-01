@@ -60,3 +60,13 @@ class TreeNode:
     @right.setter
     def right(self, node: "TreeNode"):
         self._right = node
+
+    def __str__(self) -> str:
+        left = right = None
+        if self._left:
+            left = self._left.val
+
+        if self._right:
+            right = self._right.val
+
+        return f"(left, val, right) = ({left}, {self._val}, {right})"
