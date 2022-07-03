@@ -37,11 +37,11 @@ Learn Data Structures and Algorithms.
 
 - [ ] String
 
-- [ ] Tree
+- [x] Tree
   - [ ] Rooted Tree
-  - [ ] Binary Search Tree
-  - [ ] Depth-First Search
-  - [ ] Breadth-First Search
+  - [x] Binary Search Tree
+  - [x] Depth-First Search
+  - [x] Breadth-First Search
   - [ ] Treap
   - [ ] Scape Goat
   - [ ] Spray Tree
