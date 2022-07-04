@@ -88,7 +88,7 @@ There is a Royal Road to learning.
 ## Tools
 
 - [x] [GoogleTest](https://google.github.io/googletest/)
-- [ ] [Mermaid](https://mermaid-js.github.io/mermaid/#/)
+- [x] [Mermaid](https://mermaid-js.github.io/mermaid/#/)
 
 - docker
   - [x] docker 基礎からのコンテナ構築
