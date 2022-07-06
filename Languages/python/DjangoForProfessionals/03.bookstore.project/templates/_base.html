@@ -22,6 +22,7 @@
 
     <nav class="my-2 my-md-0 mr-md-3">
       <a class="p-2 text-dark" href="{% url 'books:book_list' %}">Books</a>
+      <a class="p-2 text-dark" href="{% url 'books:search_results' %}">Search</a>
       <a class="p-2 text-dark" href="{% url 'pages:about' %}">About</a>
 
       {% if user.is_authenticated %}
