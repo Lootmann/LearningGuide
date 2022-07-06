@@ -16,7 +16,6 @@ Learn Data Structures and Algorithms.
 - [x] Array
   - [x] Array Stack
   - [x] Array Queue
-  - [ ] Array Deque
   - [x] Min Stack
 
 - [x] Singly Linked List
@@ -49,14 +48,22 @@ Learn Data Structures and Algorithms.
   - [ ] RedBlack Tree
 
 - [ ] Graph
-  - [ ] Weighted Directed Tree
-  - [ ] Minimum Spanning Tree
-  - [ ] Dijkstra
-  - [ ] Prim
-  - [ ] Bellman-Ford
-  - [ ] Strongly Connected Components
-  - [ ] Topological Sorting
-  - [ ] Maximum Flow
-  - [ ] Maximum/Minimum Cut Problems
-  - [ ] Matching
-  - [ ] Graph Coloring Problem
+  - Structures
+    - [x] UnWeighted UnDirected Tree
+    - [ ] UnWeighted Directed Tree
+    - [ ] Weighted UnDirected Tree
+    - [ ] Weighted Directed Tree
+    - [ ] Minimum Spanning Tree
+
+  - Algorithms
+    - [x] BFS
+    - [x] DFS
+    - [ ] Dijkstra
+    - [ ] Prim
+    - [ ] Bellman-Ford
+    - [ ] Strongly Connected Components
+    - [ ] Topological Sorting
+    - [ ] Maximum Flow
+    - [ ] Maximum/Minimum Cut Problems
+    - [ ] Matching
+    - [ ] Graph Coloring Problem
