@@ -6,15 +6,10 @@
 
 <!-- main -->
 {% block main %}
-<h1>pages/index.html</h1>
-<img src="{% static 'images/dfp_cover_31.png' %}" alt="book cover" class="bookcover">
+  <h1>pages/index.html</h1>
 
-{% if user.is_authenticated %}
-  Hi {{ user.email }}
-  <a href="{% url 'account_logout' %}">Log Out</a>
-{% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'account_login' %}">Log In</a>
-  <a href="{% url 'account_signup' %}">Sign Up</a>
-{% endif %}
+  <form action="{% url 'books:search_results' %}" method="get">
+    <label for="input"></label>
+    <input type="text" name="q" id="q" placeholder="Search" aria-label="Search" autofocus>
+  </form>
 {% endblock %}

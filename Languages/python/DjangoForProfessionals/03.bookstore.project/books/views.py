@@ -27,4 +27,5 @@ class BookSearchListView(generic.ListView):
     template_name = "books/search_results.html"
 
     def get_queryset(self):
-        return Book.objects.filter(Q(title__icontains="beginners") | Q(title__icontains="api"))
+        query = self.request.GET["q"]
+        return Book.objects.filter(Q(title__icontains=query) | Q(author__icontains=query))
