@@ -26,6 +26,40 @@ class SinglyLinkedNode:
         self._val = _val
 
 
+class DoublyLinkedList:
+    _next: Optional["DoublyLinkedList"]
+    _prev: Optional["DoublyLinkedList"]
+
+    def __init__(self, val):
+        self._val = val
+        self._next = None
+        self._prev = None
+
+    @property
+    def next(self):
+        return self._next
+
+    @next.setter
+    def next(self, _next: Optional["DoublyLinkedList"]):
+        self._next = _next
+
+    @property
+    def prev(self):
+        return self._prev
+
+    @prev.setter
+    def prev(self, _prev: Optional["DoublyLinkedList"]):
+        self._prev = _prev
+
+    @property
+    def val(self):
+        return self._val
+
+    @val.setter
+    def val(self, _val):
+        self._val = _val
+
+
 class TreeNode:
     """
     TreeNode
