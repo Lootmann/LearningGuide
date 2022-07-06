@@ -8,7 +8,7 @@ class TestMergeSort:
     def setup_method(self):
         self.small = [randint(1, 100000) for _ in range(1000)]
         self.middle = [randint(1, 1000000) for _ in range(10000)]
-        self.huge = [randint(1, 10000000) for _ in range(100000)]
+        self.huge = [randint(1, 10000000) for _ in range(10000)]
 
     def test_sorting_small_size(self):
         want = sorted(self.small)
