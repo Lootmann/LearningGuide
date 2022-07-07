@@ -148,6 +148,20 @@ class TestLedger(unittest.TestCase):
         )
         self.assertEqual(format_entries(currency, locale, entries), expected)
 
+    def test_flying_dutch_man(self):
+        currency = "USD"
+        locale = "nl_NL"
+        entries = [
+            create_entry("2015-03-12", "Buy present", 123456),
+        ]
+        expected = "\n".join(
+            [
+                "Datum      | Omschrijving              | Verandering  ",
+                "12-03-2015 | Buy present               |   $ 1.234,56 ",
+            ]
+        )
+        self.assertEqual(format_entries(currency, locale, entries), expected)
+
 
 if __name__ == "__main__":
     unittest.main()

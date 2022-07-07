@@ -56,16 +56,25 @@ def format_entries(currency, locale, entries: List[LedgerEntry]):
 
         # datum
         if locale == "en_US":
-            datum = "{:02d}/{:02d}/{:04d}".format(entry.date.month, entry.date.day, entry.date.year)
+            datum = "{:02d}/{:02d}/{:04d}".format(
+                entry.date.month, entry.date.day, entry.date.year
+            )
         else:
-            datum = "{:02d}-{:02d}-{:04d}".format(entry.date.day, entry.date.month, entry.date.year)
+            datum = "{:02d}-{:02d}-{:04d}".format(
+                entry.date.day, entry.date.month, entry.date.year
+            )
 
         # currenty
         changed = "{:.2f}".format(abs(entry.change) / 100)
 
         if currency == "USD":
             if locale == "nl_NL":
-                changed = f"$ -{abs(entry.change) // 100},{abs(entry.change) % 100} "
+                if entry.change < 0:
+                    changed = (
+                        f"$ -{abs(entry.change) // 100},{abs(entry.change) % 100} "
+                    )
+                else:
+                    changed = f"$ {changed[:1]}.{changed[1:].replace('.', ',')} "
 
             elif len(str(entry.change)) >= 6:
                 if abs(entry.change) >= 100000:
