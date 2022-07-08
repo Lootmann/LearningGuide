@@ -1,7 +1,7 @@
 .PHONY: all test
 
 all:
-	PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -o markers=task
+	PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -o markers=task -sv
 
 test: all
 
