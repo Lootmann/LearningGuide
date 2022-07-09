@@ -2,12 +2,7 @@ services:
   web:
     build: .
     working_dir: /code
-    command: python3.10 -m gunicorn --workers=2 \
-      --bind 0.0.0.0:8080 \
-      --access-logfile - \
-      --capture-output \
-      --log-level debug \
-      config.wsgi
+    command: python3.10 -m gunicorn --workers=3 --bind 0.0.0.0:8080 --access-logfile - --capture-output --log-level debug config.wsgi
     volumes:
       - type: bind
         source: .

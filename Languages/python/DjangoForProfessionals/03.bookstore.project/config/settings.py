@@ -1,4 +1,5 @@
 # config/settings.py
+import socket
 from pathlib import Path
 
 import environ
@@ -59,6 +60,7 @@ LOGIN_REDIRECT_URL = "pages:index"
 LOGOUT_REDIRECT_URL = "pages:index"
 
 MIDDLEWARE = [
+    "django.middleware.cache.UpdateCacheMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -66,7 +68,15 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    # cache
+    "django.middleware.cache.FetchFromCacheMiddleware",
 ]
+
+# CACHE
+CACHE_MIDDLEWARE_ALIAS = "default"
+CACHE_MIDDLEWARE_SECONDS = 604800
+CACHE_MIDDLEWARE_KEY_PREFIX = ""
 
 ROOT_URLCONF = "config.urls"
 
@@ -125,3 +135,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # email
 DEFAULT_FROM_FIELD = "admin@djangobookstore.com"
+
+# django-debug-toolbar
+
+hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
