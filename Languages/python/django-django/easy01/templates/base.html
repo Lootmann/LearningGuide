@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  {# css #}
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  {% block extracss %} {% endblock %}
+
+  <title>{% block title %} {% endblock %}</title>
+</head>
+
+<body>
+{# header #}
+{% include 'components/header.html' %}
+
+{# main #}
+<div id="main">
+  {% block main %} {% endblock %}
+</div>
+
+{# js #}
+{% block extrajs %} {% endblock %}
+</body>
+</html>
