@@ -21,9 +21,37 @@ class SinglyLinkedNode:
     def val(self):
         return self._val
 
-    @val.setter
-    def val(self, _val):
-        self._val = _val
+
+class MinNode:
+    _next: Optional["SinglyLinkedNode"]
+
+    def __init__(self, val):
+        self._val = val
+        self._min_val = val
+        self._next = None
+
+    @property
+    def next(self):
+        return self._next
+
+    @next.setter
+    def next(self, _next):
+        self._next = _next
+
+    @property
+    def val(self):
+        return self._val
+
+    @property
+    def min_val(self):
+        return self._min_val
+
+    @min_val.setter
+    def min_val(self, _min):
+        self._min_val = min(_min, self._min_val)
+
+    def __str__(self) -> str:
+        return "(val, min_val) = ({}, {})".format(self.val, self.min_val)
 
 
 class DoublyLinkedList:
