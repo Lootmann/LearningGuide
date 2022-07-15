@@ -1,10 +1,12 @@
 {% load static %}
+
 {% block extracss %}
   <link rel="stylesheet" href="{% static 'css/components/header.css' %}">
 {% endblock %}
 
 <header id="header">
   <ul>
-    <li></li>
+    <li><a href="{% url 'pages:index' %}">Pages:Index</a></li>
+    <li><a href="{% url 'quiz:index' %}">Quiz:Index</a></li>
   </ul>
 </header>

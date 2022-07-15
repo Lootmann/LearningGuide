@@ -1,0 +1,65 @@
+{# templates/quiz/index.html #}
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block extracss %}
+  <link rel="stylesheet" href="{% static 'css/components/forms.css' %}">
+  <link rel="stylesheet" href="{% static 'css/components/table.css' %}">
+{% endblock %}
+
+{% block title %}
+  quiz/index.html
+{% endblock %}
+
+{% block main %}
+  <div class="container">
+    <h1>quiz/index</h1>
+
+    {# quiz lists #}
+    <table class="table">
+      <thead>
+      <tr>
+        <th>id</th>
+        <th>statement</th>
+        <th>answer</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      {% for quiz in quizzes %}
+        <tr>
+          <td>{{ quiz.id }}</td>
+          <td>{{ quiz.statement|slice:40 }}</td>
+          <td>{{ quiz.answer|slice:40 }}</td>
+        </tr>
+        </tbody>
+      {% endfor %}
+    </table>
+
+    {# quiz create #}
+    <form action="" method="post" class="form">
+      {% csrf_token %}
+
+      <div class="row">
+        <div class="field">
+          <div class="label">
+            {{ form.statement.label }}
+          </div>
+          {{ form.statement }}
+        </div>
+
+        <div class="field">
+          <div class="label">
+            {{ form.answer.label }}
+          </div>
+          {{ form.answer }}
+        </div>
+      </div>
+
+      <div class="field">
+        <input type="submit" value="Create" class="input">
+      </div>
+    </form>
+  </div>
+{% endblock %}

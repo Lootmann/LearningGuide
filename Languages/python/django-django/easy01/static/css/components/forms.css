@@ -1,0 +1,27 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+
+  gap: 1.0rem
+}
+
+.input {
+  font-size: 1.8rem;
+  padding: 0.4rem 0.6rem;
+
+  outline: none;
+  border: none;
+  border-radius: 0.6rem;
+  box-shadow: 2px 2px;
+}

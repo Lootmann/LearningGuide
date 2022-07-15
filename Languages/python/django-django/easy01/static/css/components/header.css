@@ -1,0 +1,18 @@
+#header {
+  background-color: grey;
+}
+
+#header > ul {
+  display: flex;
+
+  gap: 1.0rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#header > ul > li {
+  list-style: none;
+
+  background-color: burlywood;
+  font-size: 1.4rem;
+}
