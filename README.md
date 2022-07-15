@@ -7,7 +7,7 @@ There is a Royal Road to learning.
 ## Computer Science
 
 - Database
-  - [ ] [AI Shift - Exercise](https://www.ai-shift.co.jp/techblog/1980)
+  - [x] [AI Shift - Exercise](https://www.ai-shift.co.jp/techblog/1980)
   - [x] [一週間で身につく MySQL](http://web.sevendays-study.com/mysql/)
   - [x] [SQL 攻略](http://sql.main.jp/)
 
