@@ -3,4 +3,4 @@ run:
 
 .PHONY: test
 test:
-	pytest -sv
+	PYTHONDONTWRITEBYTECODE=1 pytest -sv

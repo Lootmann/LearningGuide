@@ -21,7 +21,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # custom apps
+    "histories.apps.HistoriesConfig",
     "pages.apps.PagesConfig",
+    "quiz.apps.QuizConfig",
 ]
 
 MIDDLEWARE = [
