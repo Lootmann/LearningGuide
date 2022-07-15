@@ -48,10 +48,6 @@ class Stack:
     def size(self) -> int:
         return self._size
 
-    @size.setter
-    def size(self, _size: int):
-        self._size = _size
-
     @property
     def peek(self):
         if self.empty():
