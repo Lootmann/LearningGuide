@@ -1,4 +1,4 @@
-FILENAME = ./character_code.js
+FILENAME = ./18.function.scope.js
 run:
 	node ${FILENAME}
 
