@@ -1,4 +1,4 @@
-FILENAME = ./18.function.scope.js
+FILENAME = ./20.class.js
 run:
 	node ${FILENAME}
 
