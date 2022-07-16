@@ -1,4 +1,4 @@
-FILENAME = ./string.js
+FILENAME = ./character_code.js
 run:
 	node ${FILENAME}
 
