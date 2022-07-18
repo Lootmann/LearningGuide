@@ -59,6 +59,7 @@ export const title = (msg) => {
 };
 
 export const subtitle = (msg) => {
+  if (!msg) throw new Error("not msg here D:");
   const content = colored("green", "*** ") + colored("blue", msg);
   const line = attred("underscore", content) + Attribute.reset;
   console.log("\n" + line + "\n");
