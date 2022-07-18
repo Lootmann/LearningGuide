@@ -52,6 +52,8 @@ function colored(color, msg) {
 export const l = console.log;
 
 export const title = (msg) => {
+  if (!msg) throw new Error("not msg here D:");
+
   const content = colored("red", ">>> ") + colored("yellow", msg);
   console.log("\n" + attred("reverse", content) + Attribute.reset + "\n");
 };
