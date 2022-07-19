@@ -4,10 +4,10 @@
   "devDependencies": {
     "@types/node": "^16",
     "@typescript-eslint/eslint-plugin": "^5",
-    "@typescript-eslint/parser": "^5",
+    "@typescript-eslint/parser": "^3.10.1",
     "eslint": "^8",
     "eslint-config-airbnb-base": "^15",
-    "eslint-config-airbnb-typescript": "^17",
+    "eslint-config-airbnb-typescript": "^9.0.0",
     "eslint-plugin-import": "^2",
     "typescript": "^4.6"
   }
