@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: silver;
+}
+
 .container--1 {
   /* STARTER */
   font-family: sans-serif;
@@ -10,7 +14,8 @@
   margin: 30px;
 
   /* CSS GRID */
-  display: grid;
+  /* display: grid; */
+  display: none; /* disabled */
 
   /* grid-template-columns: 200px 200px 1fr auto; */
   /* grid-template-columns: 1fr 1fr 1fr auto; */
@@ -29,7 +34,7 @@
 .container--2 {
   /* STARTER */
   font-family: sans-serif;
-  background-color: black;
+  background-color: grey;
   font-size: 30px;
   margin: 80px;
 
@@ -37,7 +42,26 @@
   height: 600px;
 
   /* CSS GRID */
-  display: none;
+  display: grid;
+
+  grid-template-rows: 250px 100px;
+  grid-template-columns: 125px 200px 125px;
+  gap: 50px;
+
+  /* Aligning tracks inside container:
+   * distribute empty space */
+  justify-content: center; /* inside of container*/
+  /* justify-content: space-evenly; */
+  align-content: center;
+
+  /* Aligning items INSIDE cells: moving items
+   * around inside cells */
+  align-items: center;
+  justify-items: center;
+}
+
+.el {
+  padding: 5px;
 }
 
 .el--1 {
@@ -54,13 +78,10 @@
   grid-column: 1 / -1; /* all the way to the end */
 }
 
-.el {
-  padding: 10px;
-}
-
 .el--3 {
   background-color: green;
   height: 150px;
+  align-self: end;
 }
 
 .el--4 {
@@ -73,8 +94,7 @@
 
 .el--6 {
   background-color: steelblue;
-
-  grid-row: 3 / 5; /* new line inserted at 5 rows */
+  /* grid-row: 3 / 5; /* new line inserted at 5 rows */
 }
 
 .el--7 {
