@@ -1,33 +1,34 @@
 """
 src/main.py
 """
-from src import cache, shorten
+from urllib.parse import urlparse
+
+import shorten
+from db import DB
 
 
 def get_user_input() -> str:
     """
-    An input is like:
-        https://www.w3.org
-
-    and an output is like:
-        www.w3.org
+    An input is like:      https://www.w3.org
+    and this output is like: www.w3.org
 
     :return: str
     """
-    return input()
+    parsed = urlparse(input())
+    return parsed.hostname
 
 
 def main():
-    cache.init_db()
-
+    db = DB()
     url = get_user_input()
 
-    if cache.find_url(url):
-        print(cache.get_shorten_url(url))
+    if db.find_url(url):
+        # TODO: print shorten_url
+        print(db.get_shorten_url(url))
         return
 
-    shorten_url = shorten.create_shorten_url(url)
-    cache.create_cache(url, shorten_url)
+    shorten_url = shorten.create_shorten_url()
+    db.insert_url(url, shorten_url)
     print(shorten_url)
 
 
