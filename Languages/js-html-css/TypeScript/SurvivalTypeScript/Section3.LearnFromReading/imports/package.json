@@ -1,0 +1,16 @@
+{
+  "name": "basis",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node ./out/main.js",
+    "watch": "tsc-watch --onSuccess 'npm start'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.6.1",
+    "tsc-watch": "^5.0.3"
+  }
+}
