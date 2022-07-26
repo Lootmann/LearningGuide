@@ -1,16 +1,9 @@
-import { StringValidator } from "./module";
+const log = console.log;
 
-export const numberRegexp = /^[0-9]+$/;
-
-export class ZipCodeValidator implements StringValidator {
-  isAcceptable(s: string) {
-    return s.length === 5 && numberRegexp.test(s);
-  }
+function chooseRandomly<T>(a: T, b: T): T {
+  return Math.random() <= 0.5 ? a : b;
 }
 
-const zipper = new ZipCodeValidator();
-const strings: string[] = ["zip code", "123abc", "12334", "00001"];
-
-strings.forEach((str) => {
-  console.log(str, zipper.isAcceptable(str));
-});
+log(chooseRandomly<string>("a", "b"));
+log(chooseRandomly<number>(0, 1));
+log(chooseRandomly<string>("left", "right"));
