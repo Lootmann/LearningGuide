@@ -77,6 +77,7 @@ There is a Royal Road to learning.
   - CLI
     - [cowsay](https://flaviocopes.com/go-tutorial-cowsay/)
 
+- [Project Based Learning](https://github.com/practical-tutorials/project-based-learning#python)
 
 ## Misc
 
