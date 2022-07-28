@@ -5,4 +5,9 @@ line-length = 120
 profile = "black"
 
 [tool.pytest.ini_options]
-testpaths = ["tests", ]
+DJANGO_SETTINGS_MODULE = "config.settings"
+
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test"]
+python_functions = ["test"]
