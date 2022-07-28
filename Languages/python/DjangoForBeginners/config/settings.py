@@ -15,6 +15,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # custom apps
+    "pages.apps.PagesConfig",
 ]
 
 MIDDLEWARE = [
@@ -25,8 +27,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    # custom apps
-    "pages.apps.PagesConfig",
 ]
 
 ROOT_URLCONF = "config.urls"
