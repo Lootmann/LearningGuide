@@ -19,31 +19,19 @@ void solve() {
   int n;
   cin >> n;
 
-  vector<int> heights(n, 0);
-  rep(i, n) cin >> heights[i];
+  vector<int> heights(n);
+  for (auto &h : heights) cin >> h;
 
   vector<int> dp(n, numeric_limits<int>::max());
   dp[0] = 0;
 
   for (std::size_t i = 1; i < heights.size(); ++i) {
-    if (i == 1) {
-      int diff1 = abs(heights.at(i) - heights.at(i - 1));
-      dp[i] = diff1;
-    } else {
-      // dp: [i-1] [i]
-      // dp[i-1] + abs(h[i] - h[i-1])
-      int diff1 = abs(heights.at(i) - heights.at(i - 1)) + dp[i - 1];
-
-      // dp: [i-2] [i-1] [i]
-      // dp[i-2] + abs(h[i] - h[i-2])
-      int diff2 = abs(heights.at(i) - heights.at(i - 2)) + dp[i - 2];
-
-      // dp[i] = min(diff1, diff2);
-      chmin(dp[i], min(diff1, diff2));
+    chmin(dp[i], dp[i - 1] + abs(heights.at(i) - heights.at(i - 1)));
+    if (i > 1) {
+      chmin(dp[i], dp[i - 2] + abs(heights.at(i) - heights.at(i - 2)));
     }
-
-    show(dp);
   }
+  show(dp);
 
   cout << dp[n - 1] << '\n';
 }
